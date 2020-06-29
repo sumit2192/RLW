@@ -1,0 +1,74 @@
+PODS:
+  - Alamofire (5.0.2)
+  - CropViewController (2.5.2)
+  - FAPanels (2.0.1)
+  - FBSDKCoreKit (6.0.0):
+    - FBSDKCoreKit/Basics (= 6.0.0)
+    - FBSDKCoreKit/Core (= 6.0.0)
+  - FBSDKCoreKit/Basics (6.0.0)
+  - FBSDKCoreKit/Core (6.0.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (6.0.0):
+    - FBSDKLoginKit/Login (= 6.0.0)
+  - FBSDKLoginKit/Login (6.0.0):
+    - FBSDKCoreKit (~> 6.0.0)
+  - IQKeyboardManager (6.5.5)
+  - KRActivityIndicatorView (3.0.4)
+  - KRProgressHUD (3.4.4):
+    - KRActivityIndicatorView (= 3.0.4)
+  - MRCountryPicker (0.0.8)
+  - ObjectMapper (3.5.1)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
+  - SwiftyJSON (5.0.0)
+  - VisualEffectView (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - CropViewController
+  - FAPanels
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - IQKeyboardManager
+  - KRProgressHUD
+  - MRCountryPicker (~> 0.0.8)
+  - ObjectMapper
+  - SDWebImage
+  - SwiftyJSON
+  - VisualEffectView (~> 3.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CropViewController
+    - FAPanels
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - IQKeyboardManager
+    - KRActivityIndicatorView
+    - KRProgressHUD
+    - MRCountryPicker
+    - ObjectMapper
+    - SDWebImage
+    - SwiftyJSON
+    - VisualEffectView
+
+SPEC CHECKSUMS:
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  CropViewController: 1aac40093c5739e60d992b04724a55d12a689a4c
+  FAPanels: 050291ef601a1dc00fad888f83e74284cb86dd52
+  FBSDKCoreKit: fe738b172590e622c86735b45e20d196848b54df
+  FBSDKLoginKit: fa57df1b967fe0e147b25bede6ea4e9cdf4d64be
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
+  KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
+  MRCountryPicker: 1aeea66de25cdef79dce3b91d8ad9db643c1cc01
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  VisualEffectView: bde340c8268765c2d71f7f115930733ba7e4a926
+
+PODFILE CHECKSUM: 8ffcd98528607b415959718322cc0cc88298635a
+
+COCOAPODS: 1.8.4

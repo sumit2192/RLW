@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Children" representedClassName="Children" syncable="YES" codeGenerationType="class">
+        <attribute name="child_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="parent_email" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Games" representedClassName="Games" syncable="YES" codeGenerationType="class">
+        <attribute name="cue_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="game_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="option_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reward_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vis_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="viw_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="words" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Parents" representedClassName="Parents" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Reward_List" representedClassName="Reward_List" syncable="YES" codeGenerationType="class">
+        <attribute name="reward_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reward_Image" optional="YES" attributeType="Binary"/>
+        <attribute name="reward_Text" optional="YES" attributeType="String"/>
+        <attribute name="reward_Type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Words" representedClassName="Words" syncable="YES" codeGenerationType="class">
+        <attribute name="font_color" optional="YES" attributeType="String"/>
+        <attribute name="font_name" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="parent_email" optional="YES" attributeType="String"/>
+        <attribute name="sign" optional="YES" attributeType="Binary"/>
+        <attribute name="user_name" optional="YES" attributeType="String"/>
+        <attribute name="word_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Children" positionX="-27" positionY="45" width="128" height="118"/>
+        <element name="Games" positionX="-27" positionY="72" width="128" height="163"/>
+        <element name="Parents" positionX="-27" positionY="18" width="128" height="28"/>
+        <element name="Reward_List" positionX="-27" positionY="117" width="128" height="103"/>
+        <element name="Words" positionX="-27" positionY="27" width="128" height="148"/>
+    </elements>
+</model>
