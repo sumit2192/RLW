@@ -162,6 +162,7 @@ class Constant: NSObject {
     static let STATISTIC_VC = "statisticsVC"
     static let PLAY_VC = "playVC"
     
+    static let ViewController = "ViewController"
     let Table = TableName()
     let Option = OptionName()
     let Verbal = VerbalHint()

@@ -99,7 +99,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="U03-ws-yEk">
-                                <rect key="frame" x="341.5" y="50" width="341.00000000000006" height="253.5"/>
+                                <rect key="frame" x="341.5" y="50" width="341" height="271.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="blue"/>
@@ -120,11 +120,11 @@
                             <constraint firstItem="Erj-bv-h3Q" firstAttribute="height" secondItem="VBc-BN-PuZ" secondAttribute="height" id="RIf-BH-IxE"/>
                             <constraint firstItem="fce-So-QKr" firstAttribute="top" secondItem="41U-ry-1Mn" secondAttribute="bottom" constant="37" id="RXo-Nc-5Ho"/>
                             <constraint firstItem="Erj-bv-h3Q" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2/3" id="UXq-Iw-EUu"/>
-                            <constraint firstItem="VBc-BN-PuZ" firstAttribute="top" secondItem="U03-ws-yEk" secondAttribute="bottom" constant="162" id="X9o-xw-4QP"/>
                             <constraint firstItem="fce-So-QKr" firstAttribute="trailing" secondItem="41U-ry-1Mn" secondAttribute="trailing" id="XeI-CP-VVr"/>
                             <constraint firstItem="41U-ry-1Mn" firstAttribute="height" secondItem="VBc-BN-PuZ" secondAttribute="height" id="Zor-AZ-IFq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ROK-Sn-C2N" secondAttribute="bottom" constant="17" id="c4h-qZ-1gu"/>
                             <constraint firstItem="41U-ry-1Mn" firstAttribute="trailing" secondItem="Erj-bv-h3Q" secondAttribute="trailing" id="dRl-lF-iZN"/>
+                            <constraint firstItem="U03-ws-yEk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.198755" id="gas-vh-2qU"/>
                             <constraint firstItem="ROK-Sn-C2N" firstAttribute="height" secondItem="fce-So-QKr" secondAttribute="height" multiplier="0.995595" id="jTP-KJ-9Bc"/>
                             <constraint firstItem="fce-So-QKr" firstAttribute="height" secondItem="VBc-BN-PuZ" secondAttribute="height" id="kDC-hc-dNf"/>
                             <constraint firstItem="ROK-Sn-C2N" firstAttribute="trailing" secondItem="fce-So-QKr" secondAttribute="trailing" id="kID-GE-QSu"/>
@@ -167,45 +167,18 @@ Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.12941" green="0.14510000000000001" blue="0.16078000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Times-Roman"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="THE REAL LIFE WORDS APP">
-                                        <attributes>
-                                            <font key="NSFont" size="35" name="BalooPaaji-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+                                        <string key="content">THE REAL LIFE WORDS APP
+PRIVACY POLICY
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPS-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="PRIVACY POLICY">
-                                        <attributes>
-                                            <font key="NSFont" size="35" name="BalooPaaji-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPS-BoldMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -217,7 +190,7 @@ Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -227,7 +200,7 @@ Cg
                                     <fragment>
                                         <string key="content">The Real Life Words respects the privacy of our users (“administrators” and “users”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application.   Please read this Privacy Policy carefully.</string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -236,7 +209,7 @@ Cg
                                     </fragment>
                                     <fragment content="  ">
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -244,7 +217,7 @@ Cg
                                     </fragment>
                                     <fragment content="IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -256,7 +229,7 @@ Cg
 IAoKA
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -267,7 +240,7 @@ IAoKA
 
 This Privacy Policy does not apply to the third-party online/mobile store from which you install the Application or make payments, including any in-game items, which may also collect and use data about you.  We are not responsible for any of the data collected by any such third party. </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -279,7 +252,7 @@ This Privacy Policy does not apply to the third-party online/mobile store from w
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -287,7 +260,7 @@ Cg
                                     </fragment>
                                     <fragment content="COLLECTION OF YOUR INFORMATION">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -299,7 +272,7 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -336,7 +309,7 @@ Information from third parties, such as personal information or network friends,
 Data From Contests, Giveaways, and Surveys 
 Personal and other information you may provide when entering contests or giveaways and/or responding to surveys.</string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -348,7 +321,7 @@ Personal and other information you may provide when entering contests or giveawa
 Cgo
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -356,7 +329,7 @@ Cgo
                                     </fragment>
                                     <fragment content="USE OF YOUR INFORMATION">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -368,7 +341,7 @@ Cgo
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -379,7 +352,7 @@ Cg
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -408,7 +381,7 @@ Cg
 	•	Send you a newsletter.
 	•	Solicit support for the Application.</string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -427,7 +400,7 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
                                                     <textTab alignment="left" location="11">
@@ -445,7 +418,7 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -453,7 +426,7 @@ Cg
                                     </fragment>
                                     <fragment content="DISCLOSURE OF YOUR INFORMATION">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -465,7 +438,7 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -476,7 +449,7 @@ Cg
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -485,7 +458,7 @@ Cg
                                     </fragment>
                                     <fragment content="By Law or to Protect Rights ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -498,7 +471,7 @@ If we believe the release of information about you is necessary to respond to le
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -507,7 +480,7 @@ If we believe the release of information about you is necessary to respond to le
                                     </fragment>
                                     <fragment content="Third-Party Service Providers ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -520,7 +493,7 @@ We may share your information with third parties that perform services for us or
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -529,7 +502,7 @@ We may share your information with third parties that perform services for us or
                                     </fragment>
                                     <fragment content="Marketing Communications">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -542,7 +515,7 @@ With your consent, or with an opportunity for you to withdraw consent, we may sh
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -551,7 +524,7 @@ With your consent, or with an opportunity for you to withdraw consent, we may sh
                                     </fragment>
                                     <fragment content="Third-Party Advertisers ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -564,7 +537,7 @@ We may use third-party advertising companies to serve ads when you visit the App
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -573,7 +546,7 @@ We may use third-party advertising companies to serve ads when you visit the App
                                     </fragment>
                                     <fragment content="Affiliates ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -586,7 +559,7 @@ We may share your information with our affiliates, in which case we will require
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -595,7 +568,7 @@ We may share your information with our affiliates, in which case we will require
                                     </fragment>
                                     <fragment content="Business Partners ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -608,7 +581,7 @@ We may share your information with our business partners to offer you certain pr
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -617,7 +590,7 @@ We may share your information with our business partners to offer you certain pr
                                     </fragment>
                                     <fragment content="Offer Wall  ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -630,7 +603,7 @@ The Application may display a third-party-hosted “offer wall.”  Such an offe
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -639,7 +612,7 @@ The Application may display a third-party-hosted “offer wall.”  Such an offe
                                     </fragment>
                                     <fragment content="Other Third Parties">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -652,7 +625,7 @@ We may share your information with advertisers and investors for the purpose of 
 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -661,7 +634,7 @@ We may share your information with advertisers and investors for the purpose of 
                                     </fragment>
                                     <fragment content="Sale or Bankruptcy ">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -675,7 +648,7 @@ If we reorganize or sell all or a portion of our assets, undergo a merger, or ar
 We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations.  If you no longer wish to receive correspondence, emails or other communications from third parties, you are responsible for contacting the third party directly. 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -684,7 +657,7 @@ We are not responsible for the actions of third parties with whom you share pers
                                     </fragment>
                                     <fragment content="SECURITY OF YOUR INFORMATION">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -696,7 +669,7 @@ We are not responsible for the actions of third parties with whom you share pers
 We use administrative, technical, and physical security measures to help protect your personal information.  While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.  Any information disclosed online is vulnerable to interception and misuse by unauthorized parties.  Therefore, we cannot guarantee complete security if you provide personal information.
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -705,7 +678,7 @@ We use administrative, technical, and physical security measures to help protect
                                     </fragment>
                                     <fragment content="POLICY FOR CHILDREN">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -717,7 +690,7 @@ We use administrative, technical, and physical security measures to help protect
 We do not knowingly solicit information from or market to children under the age of 13. 
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -726,7 +699,7 @@ We do not knowingly solicit information from or market to children under the age
                                     </fragment>
                                     <fragment content="OPTIONS REGARDING YOUR INFORMATION">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -739,7 +712,7 @@ Account Information
 You may at any time review or change the information in your account by:
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -751,7 +724,7 @@ You may at any time review or change the information in your account by:
 	•	Contacting us using the contact information provided below
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -770,7 +743,7 @@ You may at any time review or change the information in your account by:
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -779,7 +752,7 @@ Cg
                                     </fragment>
                                     <fragment content="Emails and Communications">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -791,7 +764,7 @@ Cg
 If you no longer wish to receive correspondence, emails, or other communications from us, you may opt-out by:
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -803,7 +776,7 @@ If you no longer wish to receive correspondence, emails, or other communications
 	•	Logging into your account settings and updating your preferences.
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -820,7 +793,7 @@ If you no longer wish to receive correspondence, emails, or other communications
                                     <fragment>
                                         <string key="content">If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly. </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -832,7 +805,7 @@ If you no longer wish to receive correspondence, emails, or other communications
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -840,7 +813,7 @@ Cg
                                     </fragment>
                                     <fragment content="CALIFORNIA PRIVACY RIGHTS">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -852,7 +825,7 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -863,7 +836,7 @@ Cg
 
 If you are under 18 years of age, reside in California, and have a registered account with the Application, you have the right to request removal of unwanted data. </string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -875,7 +848,7 @@ If you are under 18 years of age, reside in California, and have a registered ac
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -883,7 +856,7 @@ Cg
                                     </fragment>
                                     <fragment content="CONTACT US">
                                         <attributes>
-                                            <font key="NSFont" size="32" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="32" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -895,7 +868,7 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -908,7 +881,7 @@ The Real Life Words
 …..
 ……</string>
                                         <attributes>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -920,7 +893,7 @@ The Real Life Words
 Cg
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -1025,11 +998,8 @@ Cg
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96c-ro-gvm">
-                                <rect key="frame" x="241.5" y="1212" width="682.5" height="104"/>
+                                <rect key="frame" x="241.5" y="1245" width="682.5" height="91"/>
                                 <color key="backgroundColor" name="yellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="104" id="acg-fI-3wj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="52"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1044,7 +1014,7 @@ Cg
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-WA-fpb">
-                                <rect key="frame" x="94" y="1239" width="50" height="50"/>
+                                <rect key="frame" x="94" y="1265.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AZf-Qm-qla"/>
                                     <constraint firstAttribute="width" constant="50" id="QJg-eQ-lLw"/>
@@ -1065,7 +1035,7 @@ Cg
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RvC-gl-3SW">
-                                <rect key="frame" x="20" y="173" width="984" height="1029"/>
+                                <rect key="frame" x="20" y="173" width="984" height="1062"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -1078,7 +1048,7 @@ As it is the mission of the developer of this app to improve the quality of the 
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1088,7 +1058,7 @@ As it is the mission of the developer of this app to improve the quality of the 
                                     <fragment content="AGREEMENTS">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1102,7 +1072,7 @@ Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1116,7 +1086,7 @@ Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -1138,7 +1108,7 @@ Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1151,7 +1121,7 @@ Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -1172,7 +1142,7 @@ Cgo
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1187,7 +1157,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1200,7 +1170,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1213,7 +1183,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1226,7 +1196,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1239,7 +1209,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1252,7 +1222,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1265,7 +1235,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="5" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1278,7 +1248,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1291,7 +1261,7 @@ The Real Life Words app has the rights to terminate an account that's being abus
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="5" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -1312,7 +1282,7 @@ Acceptable methods of payments include credit and debit cards. The administrator
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1325,7 +1295,7 @@ Acceptable methods of payments include credit and debit cards. The administrator
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1340,7 +1310,7 @@ Acceptable methods of payments include credit and debit cards. The administrator
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="5" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -1360,7 +1330,7 @@ Acceptable methods of payments include credit and debit cards. The administrator
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops>
@@ -1382,7 +1352,7 @@ The Real Life Words app does not guarantee that the app is free from mistakes, m
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1395,7 +1365,7 @@ The Real Life Words app does not guarantee that the app is free from mistakes, m
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="15" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1409,7 +1379,7 @@ The Real Life Words app does not guarantee that the app is free from mistakes, m
 The terms and conditions of the Real Life Words app falls under a U.S. laws and administrators and users of the app will agree to this governing law.</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
@@ -1423,7 +1393,7 @@ Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="12" name="TimesNewRomanPSMT"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="18.75" paragraphSpacingBefore="18.75" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -1436,14 +1406,14 @@ Cg
 Your privacy matters to us. You can learn how to handle your information when you use our services by reading our  </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Privacy Policy">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <font key="NSOriginalFont" size="30" name="BalooPaaji-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             <integer key="NSUnderline" value="1"/>
@@ -1453,7 +1423,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                         <string key="content"> By using the app, you agree that the Real Life Words reserves the right to collect, use, and share your information consistent with that policy. </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="BalooPaaji-Regular"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1468,12 +1438,13 @@ Your privacy matters to us. You can learn how to handle your information when yo
                         <constraints>
                             <constraint firstItem="96c-ro-gvm" firstAttribute="width" secondItem="2PI-rr-gKw" secondAttribute="width" multiplier="2/3" id="8qL-B9-hxz"/>
                             <constraint firstItem="E76-Cc-9R8" firstAttribute="trailing" secondItem="S1e-jO-328" secondAttribute="trailing" id="MgE-mZ-ckd"/>
+                            <constraint firstItem="96c-ro-gvm" firstAttribute="height" secondItem="2PI-rr-gKw" secondAttribute="height" multiplier="1/15" id="QdE-4I-6LV"/>
                             <constraint firstItem="96c-ro-gvm" firstAttribute="top" secondItem="RvC-gl-3SW" secondAttribute="bottom" constant="10" id="S0O-Bu-rHR"/>
                             <constraint firstItem="S1e-jO-328" firstAttribute="leading" secondItem="E76-Cc-9R8" secondAttribute="leading" id="Uwg-7n-B5B"/>
                             <constraint firstItem="RvC-gl-3SW" firstAttribute="leading" secondItem="E76-Cc-9R8" secondAttribute="leading" constant="20" id="Wq4-zV-cje"/>
                             <constraint firstItem="E76-Cc-9R8" firstAttribute="trailing" secondItem="RvC-gl-3SW" secondAttribute="trailing" constant="20" id="XPS-YL-IjG"/>
                             <constraint firstItem="FQx-WA-fpb" firstAttribute="centerY" secondItem="96c-ro-gvm" secondAttribute="centerY" id="Xg0-e7-iaB"/>
-                            <constraint firstItem="E76-Cc-9R8" firstAttribute="bottom" secondItem="96c-ro-gvm" secondAttribute="bottom" constant="30" id="Zff-aN-uT4"/>
+                            <constraint firstItem="E76-Cc-9R8" firstAttribute="bottom" secondItem="96c-ro-gvm" secondAttribute="bottom" constant="10" id="Zff-aN-uT4"/>
                             <constraint firstItem="RvC-gl-3SW" firstAttribute="top" secondItem="S1e-jO-328" secondAttribute="bottom" constant="8" id="cha-4r-dgd"/>
                             <constraint firstItem="S1e-jO-328" firstAttribute="top" secondItem="2PI-rr-gKw" secondAttribute="top" id="hWR-dM-WS1"/>
                             <constraint firstItem="E76-Cc-9R8" firstAttribute="trailing" secondItem="96c-ro-gvm" secondAttribute="trailing" constant="100" id="lKf-Vd-beW"/>
@@ -1547,7 +1518,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="13Q-PQ-xAL">
-                                <rect key="frame" x="341.5" y="50" width="341.00000000000006" height="254"/>
+                                <rect key="frame" x="341.5" y="50" width="341" height="271.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERF-6Y-qjh">
                                 <rect key="frame" x="550.5" y="764" width="303" height="50"/>
@@ -1566,6 +1537,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                         </subviews>
                         <color key="backgroundColor" name="blue"/>
                         <constraints>
+                            <constraint firstItem="13Q-PQ-xAL" firstAttribute="height" secondItem="8Qv-aM-2zq" secondAttribute="height" multiplier="0.198755" id="0iz-Vd-HAE"/>
                             <constraint firstItem="1FU-r4-qL6" firstAttribute="centerY" secondItem="EFv-ns-cMg" secondAttribute="centerY" id="53n-Zx-F03"/>
                             <constraint firstItem="Qzg-8L-Hbl" firstAttribute="width" secondItem="1FU-r4-qL6" secondAttribute="width" id="78F-Y5-ZAE"/>
                             <constraint firstItem="1FU-r4-qL6" firstAttribute="height" secondItem="8Qv-aM-2zq" secondAttribute="height" multiplier="1/12" id="8xB-dF-RiT"/>
@@ -1575,7 +1547,6 @@ Your privacy matters to us. You can learn how to handle your information when yo
                             <constraint firstItem="ERF-6Y-qjh" firstAttribute="trailing" secondItem="1FU-r4-qL6" secondAttribute="trailing" id="Ix5-c5-sLb"/>
                             <constraint firstItem="1FU-r4-qL6" firstAttribute="top" secondItem="i4k-gf-NMe" secondAttribute="bottom" constant="37" id="Uig-LM-wx9"/>
                             <constraint firstItem="Qzg-8L-Hbl" firstAttribute="centerX" secondItem="EFv-ns-cMg" secondAttribute="centerX" id="Vqy-sh-mhb"/>
-                            <constraint firstItem="i4k-gf-NMe" firstAttribute="top" secondItem="13Q-PQ-xAL" secondAttribute="bottom" constant="162" id="aTn-MA-7Jw"/>
                             <constraint firstItem="13Q-PQ-xAL" firstAttribute="width" secondItem="i4k-gf-NMe" secondAttribute="width" multiplier="0.5" id="eAd-vv-6oC"/>
                             <constraint firstItem="13Q-PQ-xAL" firstAttribute="top" secondItem="EFv-ns-cMg" secondAttribute="top" constant="50" id="iKO-K8-mSL"/>
                             <constraint firstItem="ERF-6Y-qjh" firstAttribute="top" secondItem="1FU-r4-qL6" secondAttribute="bottom" constant="34" id="ieC-nu-ZEz"/>
@@ -1611,7 +1582,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0v-xp-Tj8">
-                                        <rect key="frame" x="291.5" y="22.5" width="441" height="85"/>
+                                        <rect key="frame" x="291.5" y="37" width="441" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="441" id="h3s-S4-tmo"/>
                                         </constraints>
@@ -1724,7 +1695,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                             <rect key="frame" x="0.0" y="0.0" width="1034" height="112.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Feature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-Yv-GG5">
-                                    <rect key="frame" x="330" y="26.5" width="374" height="60"/>
+                                    <rect key="frame" x="334" y="26.5" width="366.5" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="31k-BJ-hKc"/>
                                     </constraints>
@@ -1733,7 +1704,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bek-R7-ugU">
-                                    <rect key="frame" x="251" y="36.5" width="40" height="40"/>
+                                    <rect key="frame" x="255" y="36.5" width="40" height="40"/>
                                     <color key="backgroundColor" name="Appblue"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="dAR-eV-fhX"/>
@@ -1848,7 +1819,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="F6Y-H7-7Ln">
-                                <rect key="frame" x="341.5" y="50" width="341.00000000000006" height="271.5"/>
+                                <rect key="frame" x="341.5" y="50" width="341" height="543"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any user yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sen-DX-jYt">
                                 <rect key="frame" x="322" y="625.5" width="380" height="50"/>
@@ -1876,7 +1847,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nEs-MU-fSC">
-                                <rect key="frame" x="20" y="371.5" width="984" height="776"/>
+                                <rect key="frame" x="20" y="643" width="984" height="504.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" rowHeight="150" id="Ce8-HG-CTD" customClass="UserCell" customModule="Real_Life_Words" customModuleProvider="target">
@@ -1955,8 +1926,8 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                     <outlet property="delegate" destination="bY9-0J-L6T" id="TsV-yG-sD0"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-Xp-T4L">
-                                <rect key="frame" x="834.5" y="20" width="169.5" height="63.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BF2-Xp-T4L">
+                                <rect key="frame" x="825.5" y="20" width="178.5" height="42"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
                                 <color key="textColor" name="AppLightBlue"/>
                                 <nil key="highlightedColor"/>
@@ -2070,7 +2041,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                             <rect key="frame" x="0.0" y="0.0" width="1034" height="112.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Feature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibH-NW-eeF">
-                                    <rect key="frame" x="330" y="26.5" width="374" height="60"/>
+                                    <rect key="frame" x="334" y="26.5" width="366.5" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="Sf1-5E-eTh"/>
                                     </constraints>
@@ -2079,7 +2050,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nor-Tr-EXf">
-                                    <rect key="frame" x="251" y="36.5" width="40" height="40"/>
+                                    <rect key="frame" x="255" y="36.5" width="40" height="40"/>
                                     <color key="backgroundColor" name="Appblue"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="S83-Gj-Gyr"/>
@@ -2243,7 +2214,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6x-N5-MqT">
-                                <rect key="frame" x="170.5" y="473" width="683" height="113"/>
+                                <rect key="frame" x="170.5" y="523" width="683" height="113"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.97647058819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" name="blue"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
@@ -2258,7 +2229,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRv-wa-072">
-                                <rect key="frame" x="170.5" y="616" width="683" height="114"/>
+                                <rect key="frame" x="170.5" y="666" width="683" height="114"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.97647058819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" name="blue"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
@@ -2273,7 +2244,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Passowrd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2H-Cx-gvS">
-                                <rect key="frame" x="170.5" y="760" width="683" height="114"/>
+                                <rect key="frame" x="170.5" y="810" width="683" height="114"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.97647058819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" name="blue"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
@@ -2288,16 +2259,16 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*(password should be of minimum 4 characters)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="208-1c-1c5">
-                                <rect key="frame" x="100" y="924" width="824" height="100"/>
+                                <rect key="frame" x="100" y="944" width="824" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="yWl-3d-Vzd"/>
+                                    <constraint firstAttribute="height" constant="80" id="yWl-3d-Vzd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="25"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.97647058819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-16-2dD">
-                                <rect key="frame" x="402" y="223" width="220" height="220"/>
+                                <rect key="frame" x="412" y="293" width="200" height="200"/>
                                 <color key="backgroundColor" name="Appwhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2306,20 +2277,20 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-at-qmq">
-                                <rect key="frame" x="402" y="223" width="220" height="220"/>
+                                <rect key="frame" x="412" y="293" width="200" height="200"/>
                                 <color key="backgroundColor" name="Appwhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="96z-0D-d8D"/>
-                                    <constraint firstAttribute="height" constant="220" id="ghO-LP-uvr"/>
+                                    <constraint firstAttribute="width" constant="200" id="96z-0D-d8D"/>
+                                    <constraint firstAttribute="height" constant="200" id="ghO-LP-uvr"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="110"/>
+                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-Id-su6">
-                                <rect key="frame" x="402" y="308" width="220" height="50"/>
+                                <rect key="frame" x="412" y="368" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5E6-mw-W96"/>
                                 </constraints>
@@ -2328,10 +2299,10 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-A6-xCA">
-                                <rect key="frame" x="542" y="363" width="80" height="80"/>
+                                <rect key="frame" x="552" y="433" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="GbU-OI-wci"/>
-                                    <constraint firstAttribute="height" constant="80" id="mw3-LR-i1L"/>
+                                    <constraint firstAttribute="width" constant="60" id="GbU-OI-wci"/>
+                                    <constraint firstAttribute="height" constant="60" id="mw3-LR-i1L"/>
                                 </constraints>
                                 <state key="normal" image="Add"/>
                                 <connections>
@@ -2373,7 +2344,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a53-KU-FAF">
-                                <rect key="frame" x="0.0" y="735" width="1024" height="631"/>
+                                <rect key="frame" x="0.0" y="785" width="1024" height="581"/>
                                 <color key="backgroundColor" name="Appblue"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZKk-su-wk8">
                                     <size key="itemSize" width="216" height="212"/>
@@ -2463,13 +2434,13 @@ Your privacy matters to us. You can learn how to handle your information when yo
                             <constraint firstItem="o6x-N5-MqT" firstAttribute="width" secondItem="RRv-wa-072" secondAttribute="width" id="iyD-tk-fji"/>
                             <constraint firstItem="jx3-pa-QA6" firstAttribute="trailing" secondItem="HvZ-kj-rgE" secondAttribute="trailing" id="jOF-RP-vHm"/>
                             <constraint firstItem="Wkh-Df-nlK" firstAttribute="leading" secondItem="HvZ-kj-rgE" secondAttribute="leading" id="khw-ce-eM3"/>
-                            <constraint firstItem="208-1c-1c5" firstAttribute="top" secondItem="o2H-Cx-gvS" secondAttribute="bottom" constant="50" id="lXf-dZ-nx4"/>
+                            <constraint firstItem="208-1c-1c5" firstAttribute="top" secondItem="o2H-Cx-gvS" secondAttribute="bottom" constant="20" id="lXf-dZ-nx4"/>
                             <constraint firstItem="o2H-Cx-gvS" firstAttribute="height" secondItem="RRv-wa-072" secondAttribute="height" id="m9J-JH-udn"/>
                             <constraint firstItem="jx3-pa-QA6" firstAttribute="top" secondItem="HvZ-kj-rgE" secondAttribute="top" id="mca-Hv-XD4"/>
                             <constraint firstItem="p91-wT-0mX" firstAttribute="centerY" secondItem="HvZ-kj-rgE" secondAttribute="centerY" id="ndc-4Y-Ok6"/>
                             <constraint firstItem="HvZ-kj-rgE" firstAttribute="trailing" secondItem="208-1c-1c5" secondAttribute="trailing" constant="100" id="sza-Bw-aGE"/>
                             <constraint firstItem="tQ4-16-2dD" firstAttribute="height" secondItem="gfz-at-qmq" secondAttribute="height" id="t1h-6Q-VCH"/>
-                            <constraint firstItem="RRv-wa-072" firstAttribute="centerY" secondItem="HvZ-kj-rgE" secondAttribute="centerY" id="tvb-Q8-3lr"/>
+                            <constraint firstItem="RRv-wa-072" firstAttribute="centerY" secondItem="HvZ-kj-rgE" secondAttribute="centerY" constant="50" id="tvb-Q8-3lr"/>
                             <constraint firstItem="o2H-Cx-gvS" firstAttribute="centerX" secondItem="RRv-wa-072" secondAttribute="centerX" id="xWo-lt-TKU"/>
                             <constraint firstAttribute="bottom" secondItem="a53-KU-FAF" secondAttribute="bottom" id="yDf-Tj-NsK"/>
                             <constraint firstItem="sfH-A6-xCA" firstAttribute="trailing" secondItem="gfz-at-qmq" secondAttribute="trailing" id="ytk-p3-9MU"/>
@@ -3140,7 +3111,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSt-PI-kn4">
-                                        <rect key="frame" x="497" y="10" width="30" height="104"/>
+                                        <rect key="frame" x="497" y="25.5" width="30" height="73"/>
                                         <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="52"/>
                                         <connections>
                                             <action selector="cmdAddSelected:" destination="PTk-Jk-sWy" eventType="touchUpInside" id="hme-cf-Q9g"/>
@@ -3315,10 +3286,10 @@ Now setup the following games according to the user’s age, understanding &amp;
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjF-3y-cyS" userLabel="Two Option View">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjF-3y-cyS" userLabel="Two Option View">
                                 <rect key="frame" x="30" y="256.5" width="964" height="171"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7m-cI-hTg" userLabel="Bullet1">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7m-cI-hTg" userLabel="Bullet1">
                                         <rect key="frame" x="50" y="45.5" width="20" height="20"/>
                                         <color key="backgroundColor" name="AppYellow"/>
                                         <constraints>
@@ -3326,14 +3297,14 @@ Now setup the following games according to the user’s age, understanding &amp;
                                             <constraint firstAttribute="width" constant="20" id="9FH-5K-UOX"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOU-eo-CyX" userLabel="Line1">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOU-eo-CyX" userLabel="Line1">
                                         <rect key="frame" x="90" y="50.5" width="482" height="10"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="mW8-hK-9ub"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gii-AV-SgZ" userLabel="Bullet2">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gii-AV-SgZ" userLabel="Bullet2">
                                         <rect key="frame" x="50" y="105.5" width="20" height="20"/>
                                         <color key="backgroundColor" name="AppYellow"/>
                                         <constraints>
@@ -3341,14 +3312,14 @@ Now setup the following games according to the user’s age, understanding &amp;
                                             <constraint firstAttribute="width" constant="20" id="jUf-us-8BX"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFC-qy-7aA" userLabel="Line2">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFC-qy-7aA" userLabel="Line2">
                                         <rect key="frame" x="90" y="110.5" width="482" height="10"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="dg9-uS-bfk"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-Tu-RVn">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnQ-Tu-RVn">
                                         <rect key="frame" x="864" y="55.5" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="bXE-wH-mCe"/>
@@ -3358,6 +3329,10 @@ Now setup the following games according to the user’s age, understanding &amp;
                                         <color key="textColor" name="AppYellow"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstOpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="KZJ-Ab-DbD">
+                                        <rect key="frame" x="0.0" y="0.0" width="964" height="171"/>
+                                        <color key="backgroundColor" name="AppDarkBlue"/>
+                                    </imageView>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9n-SQ-lhh">
                                         <rect key="frame" x="0.0" y="0.0" width="964" height="171"/>
                                         <connections>
@@ -3371,14 +3346,18 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     <constraint firstItem="gii-AV-SgZ" firstAttribute="centerY" secondItem="kjF-3y-cyS" secondAttribute="centerY" constant="30" id="6Nd-6G-73O"/>
                                     <constraint firstItem="HOU-eo-CyX" firstAttribute="leading" secondItem="f7m-cI-hTg" secondAttribute="trailing" constant="20" id="BIN-7T-dmU"/>
                                     <constraint firstItem="f7m-cI-hTg" firstAttribute="centerY" secondItem="kjF-3y-cyS" secondAttribute="centerY" constant="-30" id="LHk-w6-lwC"/>
+                                    <constraint firstAttribute="trailing" secondItem="KZJ-Ab-DbD" secondAttribute="trailing" id="N2z-EG-YKs"/>
+                                    <constraint firstItem="KZJ-Ab-DbD" firstAttribute="top" secondItem="kjF-3y-cyS" secondAttribute="top" id="T4J-Bx-FLz"/>
                                     <constraint firstAttribute="trailing" secondItem="KnQ-Tu-RVn" secondAttribute="trailing" constant="40" id="Thu-ox-kPA"/>
                                     <constraint firstItem="v9n-SQ-lhh" firstAttribute="top" secondItem="kjF-3y-cyS" secondAttribute="top" id="Uga-FM-YYL"/>
                                     <constraint firstItem="HOU-eo-CyX" firstAttribute="width" secondItem="kjF-3y-cyS" secondAttribute="width" multiplier="1/2" id="Ycx-ZE-fAE"/>
                                     <constraint firstItem="gii-AV-SgZ" firstAttribute="leading" secondItem="f7m-cI-hTg" secondAttribute="leading" id="Z0I-QB-Wyc"/>
                                     <constraint firstItem="f7m-cI-hTg" firstAttribute="leading" secondItem="kjF-3y-cyS" secondAttribute="leading" constant="50" id="caj-HP-9Cq"/>
+                                    <constraint firstAttribute="bottom" secondItem="KZJ-Ab-DbD" secondAttribute="bottom" id="cuG-6g-dgf"/>
                                     <constraint firstItem="KnQ-Tu-RVn" firstAttribute="centerY" secondItem="kjF-3y-cyS" secondAttribute="centerY" id="e0T-dz-YeN"/>
                                     <constraint firstItem="HOU-eo-CyX" firstAttribute="centerY" secondItem="f7m-cI-hTg" secondAttribute="centerY" id="nJR-Xs-OJr"/>
                                     <constraint firstAttribute="trailing" secondItem="v9n-SQ-lhh" secondAttribute="trailing" id="pPR-ah-FSV"/>
+                                    <constraint firstItem="KZJ-Ab-DbD" firstAttribute="leading" secondItem="kjF-3y-cyS" secondAttribute="leading" id="qSu-bj-KN6"/>
                                     <constraint firstItem="IFC-qy-7aA" firstAttribute="centerY" secondItem="gii-AV-SgZ" secondAttribute="centerY" id="vzE-Fb-6Eh"/>
                                     <constraint firstItem="v9n-SQ-lhh" firstAttribute="leading" secondItem="kjF-3y-cyS" secondAttribute="leading" id="yF5-oS-CjO"/>
                                     <constraint firstAttribute="bottom" secondItem="v9n-SQ-lhh" secondAttribute="bottom" id="zUE-zG-26n"/>
@@ -3390,7 +3369,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCg-9A-YWn" userLabel="Three Option View">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCg-9A-YWn" userLabel="Three Option View">
                                 <rect key="frame" x="30" y="457.5" width="964" height="227.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Uf-TX-nP1">
@@ -3463,6 +3442,10 @@ Now setup the following games according to the user’s age, understanding &amp;
                                             <constraint firstAttribute="height" constant="10" id="V8a-jW-Lez"/>
                                         </constraints>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondOpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="QcF-NI-AIj">
+                                        <rect key="frame" x="0.0" y="0.0" width="964" height="227.5"/>
+                                        <color key="backgroundColor" name="AppDarkBlue"/>
+                                    </imageView>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-Ub-4jr">
                                         <rect key="frame" x="0.0" y="0.0" width="964" height="227.5"/>
                                         <connections>
@@ -3480,15 +3463,19 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     <constraint firstItem="7Uf-TX-nP1" firstAttribute="leading" secondItem="nCg-9A-YWn" secondAttribute="leading" constant="50" id="Gxn-tN-K7G"/>
                                     <constraint firstItem="5s0-oK-9Lp" firstAttribute="width" secondItem="nCg-9A-YWn" secondAttribute="width" multiplier="1/2" id="KAu-ha-MGf"/>
                                     <constraint firstItem="MoA-SN-PxL" firstAttribute="leading" secondItem="sel-x6-wjf" secondAttribute="trailing" constant="20" id="NQw-t5-vTv"/>
+                                    <constraint firstAttribute="trailing" secondItem="QcF-NI-AIj" secondAttribute="trailing" id="NUj-d7-2u3"/>
                                     <constraint firstAttribute="bottom" secondItem="Ycu-Ub-4jr" secondAttribute="bottom" id="OFK-ra-oWG"/>
                                     <constraint firstItem="sel-x6-wjf" firstAttribute="leading" secondItem="7Uf-TX-nP1" secondAttribute="leading" id="Ome-2M-AiF"/>
                                     <constraint firstItem="dmA-FV-Mwo" firstAttribute="top" secondItem="sel-x6-wjf" secondAttribute="bottom" constant="30" id="QvQ-u8-4xh"/>
                                     <constraint firstItem="5s0-oK-9Lp" firstAttribute="centerY" secondItem="7Uf-TX-nP1" secondAttribute="centerY" id="Y5E-up-ehg"/>
+                                    <constraint firstAttribute="bottom" secondItem="QcF-NI-AIj" secondAttribute="bottom" id="beJ-q6-EgP"/>
                                     <constraint firstItem="MoA-SN-PxL" firstAttribute="width" secondItem="5s0-oK-9Lp" secondAttribute="width" id="c0d-Q9-Hgw"/>
+                                    <constraint firstItem="QcF-NI-AIj" firstAttribute="leading" secondItem="nCg-9A-YWn" secondAttribute="leading" id="cEp-oH-sny"/>
                                     <constraint firstItem="Ycu-Ub-4jr" firstAttribute="top" secondItem="nCg-9A-YWn" secondAttribute="top" id="dFV-f6-Wlz"/>
                                     <constraint firstAttribute="trailing" secondItem="FdK-4o-hM7" secondAttribute="trailing" constant="40" id="ejz-NJ-yaM"/>
                                     <constraint firstItem="8Ga-Dk-pzK" firstAttribute="width" secondItem="MoA-SN-PxL" secondAttribute="width" id="hFS-qu-ApN"/>
                                     <constraint firstItem="5s0-oK-9Lp" firstAttribute="leading" secondItem="7Uf-TX-nP1" secondAttribute="trailing" constant="20" id="huh-EJ-W1a"/>
+                                    <constraint firstItem="QcF-NI-AIj" firstAttribute="top" secondItem="nCg-9A-YWn" secondAttribute="top" id="iGt-wB-oUU"/>
                                     <constraint firstItem="sel-x6-wjf" firstAttribute="top" secondItem="7Uf-TX-nP1" secondAttribute="bottom" constant="30" id="jKN-e4-SKj"/>
                                     <constraint firstItem="8Ga-Dk-pzK" firstAttribute="leading" secondItem="dmA-FV-Mwo" secondAttribute="trailing" constant="20" id="mFW-XO-nZu"/>
                                     <constraint firstItem="MoA-SN-PxL" firstAttribute="centerY" secondItem="sel-x6-wjf" secondAttribute="centerY" id="qcc-Ah-fSv"/>
@@ -3500,7 +3487,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGx-1i-W4D" userLabel="Four Option View">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGx-1i-W4D" userLabel="Four Option View">
                                 <rect key="frame" x="30" y="715" width="964" height="273"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-NZ-gUt" customClass="RhombusView" customModule="Real_Life_Words" customModuleProvider="target">
@@ -3593,6 +3580,10 @@ Now setup the following games according to the user’s age, understanding &amp;
                                             <constraint firstAttribute="height" constant="10" id="YOs-04-RR0"/>
                                         </constraints>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thirdOpt.png" translatesAutoresizingMaskIntoConstraints="NO" id="6L0-K8-LO8">
+                                        <rect key="frame" x="0.0" y="0.0" width="964" height="273"/>
+                                        <color key="backgroundColor" name="AppDarkBlue"/>
+                                    </imageView>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmE-XZ-aqY">
                                         <rect key="frame" x="0.0" y="0.0" width="964" height="273"/>
                                         <connections>
@@ -3602,9 +3593,11 @@ Now setup the following games according to the user’s age, understanding &amp;
                                 </subviews>
                                 <color key="backgroundColor" name="AppDarkBlue"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6L0-K8-LO8" secondAttribute="bottom" id="1lj-AY-hyJ"/>
                                     <constraint firstItem="TPy-9y-4XQ" firstAttribute="width" secondItem="Gmh-j7-E4s" secondAttribute="width" id="4eW-NV-5XP"/>
                                     <constraint firstItem="wG7-15-sgU" firstAttribute="centerY" secondItem="d3c-pe-Zdf" secondAttribute="centerY" id="5mw-gZ-QXW"/>
                                     <constraint firstItem="iOS-kk-LEV" firstAttribute="leading" secondItem="iRg-AO-Sz0" secondAttribute="trailing" constant="20" id="9U0-7K-BU3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6L0-K8-LO8" secondAttribute="trailing" id="FwM-iG-Y8b"/>
                                     <constraint firstItem="bmE-XZ-aqY" firstAttribute="leading" secondItem="QGx-1i-W4D" secondAttribute="leading" id="G2Y-JN-Ghn"/>
                                     <constraint firstItem="iRg-AO-Sz0" firstAttribute="leading" secondItem="YfH-OR-xKa" secondAttribute="leading" id="GSp-fy-KX8"/>
                                     <constraint firstItem="iOS-kk-LEV" firstAttribute="width" secondItem="TPy-9y-4XQ" secondAttribute="width" id="HKP-ZC-kHt"/>
@@ -3614,6 +3607,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     <constraint firstItem="ODO-NZ-gUt" firstAttribute="leading" secondItem="QGx-1i-W4D" secondAttribute="leading" constant="50" id="PDT-sR-EeG"/>
                                     <constraint firstItem="YfH-OR-xKa" firstAttribute="centerY" secondItem="QGx-1i-W4D" secondAttribute="centerY" constant="-30" id="Q9Y-kB-I7d"/>
                                     <constraint firstItem="wG7-15-sgU" firstAttribute="leading" secondItem="d3c-pe-Zdf" secondAttribute="trailing" constant="20" id="Thi-dL-wuH"/>
+                                    <constraint firstItem="6L0-K8-LO8" firstAttribute="leading" secondItem="QGx-1i-W4D" secondAttribute="leading" id="TmL-BA-8Dj"/>
                                     <constraint firstItem="TPy-9y-4XQ" firstAttribute="centerY" secondItem="YfH-OR-xKa" secondAttribute="centerY" id="Twz-m9-bgL"/>
                                     <constraint firstItem="TPy-9y-4XQ" firstAttribute="leading" secondItem="YfH-OR-xKa" secondAttribute="trailing" constant="20" id="UQu-KI-va0"/>
                                     <constraint firstItem="Gmh-j7-E4s" firstAttribute="width" secondItem="QGx-1i-W4D" secondAttribute="width" multiplier="1/2" id="ZVt-S0-POK"/>
@@ -3626,6 +3620,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     <constraint firstItem="bmE-XZ-aqY" firstAttribute="top" secondItem="QGx-1i-W4D" secondAttribute="top" id="sGO-0u-K4V"/>
                                     <constraint firstItem="Gmh-j7-E4s" firstAttribute="leading" secondItem="ODO-NZ-gUt" secondAttribute="trailing" constant="20" id="sp9-ka-RWq"/>
                                     <constraint firstAttribute="trailing" secondItem="0MS-H5-wmp" secondAttribute="trailing" constant="40" id="v7R-Ze-4tn"/>
+                                    <constraint firstItem="6L0-K8-LO8" firstAttribute="top" secondItem="QGx-1i-W4D" secondAttribute="top" id="x0m-Ms-Jh3"/>
                                     <constraint firstItem="Gmh-j7-E4s" firstAttribute="centerY" secondItem="ODO-NZ-gUt" secondAttribute="centerY" id="xoQ-pb-h8Y"/>
                                     <constraint firstItem="d3c-pe-Zdf" firstAttribute="leading" secondItem="iRg-AO-Sz0" secondAttribute="leading" id="z2A-qZ-sJA"/>
                                 </constraints>
@@ -4527,7 +4522,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                             <rect key="frame" x="0.0" y="0.0" width="1034" height="112.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Feature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F49-qR-zQZ">
-                                    <rect key="frame" x="330" y="26.5" width="374" height="60"/>
+                                    <rect key="frame" x="334" y="26.5" width="366.5" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="h8R-gb-tiM"/>
                                     </constraints>
@@ -4536,7 +4531,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55k-f6-JTM">
-                                    <rect key="frame" x="251" y="36.5" width="40" height="40"/>
+                                    <rect key="frame" x="255" y="36.5" width="40" height="40"/>
                                     <color key="backgroundColor" name="Appblue"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="Qw5-DQ-Nob"/>
@@ -4946,7 +4941,7 @@ correct choice</string>
                             <rect key="frame" x="0.0" y="0.0" width="1034" height="112.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Feature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-RA-3Rb">
-                                    <rect key="frame" x="330" y="26.5" width="374" height="60"/>
+                                    <rect key="frame" x="334" y="26.5" width="366.5" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="xZm-L3-sZk"/>
                                     </constraints>
@@ -4955,7 +4950,7 @@ correct choice</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5W-BV-ZSC">
-                                    <rect key="frame" x="251" y="36.5" width="40" height="40"/>
+                                    <rect key="frame" x="255" y="36.5" width="40" height="40"/>
                                     <color key="backgroundColor" name="Appblue"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="MJJ-hW-4vQ"/>
@@ -5908,7 +5903,7 @@ correct choice</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl5-Ed-06C">
-                                <rect key="frame" x="471" y="85" width="82" height="80"/>
+                                <rect key="frame" x="464" y="85" width="96.5" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Qus-8P-qdi"/>
                                 </constraints>
@@ -5972,7 +5967,7 @@ correct choice</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restrooms" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8q-iz-guH">
-                                                    <rect key="frame" x="40.5" y="68.5" width="197.5" height="70.5"/>
+                                                    <rect key="frame" x="42" y="80" width="194.5" height="47"/>
                                                     <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="40"/>
                                                     <color key="textColor" name="Appwhite"/>
                                                     <nil key="highlightedColor"/>
@@ -6024,7 +6019,7 @@ correct choice</string>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eai-IF-dfH">
-                                <rect key="frame" x="361.5" y="395" width="301" height="60"/>
+                                <rect key="frame" x="364.5" y="395" width="295.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6Vk-Jp-Jfo"/>
                                 </constraints>
@@ -6042,7 +6037,7 @@ correct choice</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-uB-vq2">
-                                <rect key="frame" x="630.5" y="333" width="62" height="62"/>
+                                <rect key="frame" x="628" y="333" width="62" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yie-Jd-WbG">
                                         <rect key="frame" x="1" y="1" width="60" height="60"/>
@@ -6114,6 +6109,42 @@ correct choice</string>
             </objects>
             <point key="canvasLocation" x="7422.6562499999991" y="1026.939970717423"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7eU-vJ-RBz">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="7vo-Zc-6pq" customClass="ViewController" customModule="Real_Life_Words" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdL-pD-gR7">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aat-B1-xmr">
+                                <rect key="frame" x="180" y="288" width="641" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7N-wS-V6C">
+                                <rect key="frame" x="375" y="84" width="274" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnStartSpeechToText:" destination="7vo-Zc-6pq" eventType="touchUpInside" id="tgR-QY-ajn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Lb3-di-9H2"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="z7N-wS-V6C" id="QTL-sU-FEr"/>
+                        <outlet property="lblText" destination="aat-B1-xmr" id="55Z-27-DYR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Den-O0-koz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5733.984375" y="2207.6134699853587"/>
+        </scene>
         <!--StatisticsVC-->
         <scene sceneID="T9A-qo-mH5">
             <objects>
@@ -6155,7 +6186,7 @@ correct choice</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYn-LD-2J7">
-                                        <rect key="frame" x="0.0" y="170" width="300" height="63.5"/>
+                                        <rect key="frame" x="0.0" y="170" width="300" height="42"/>
                                         <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
                                         <color key="textColor" name="Appwhite"/>
                                         <nil key="highlightedColor"/>
@@ -6211,7 +6242,7 @@ correct choice</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-K9-E2z">
-                                <rect key="frame" x="409.5" y="1122.5" width="205" height="80"/>
+                                <rect key="frame" x="409.5" y="1144" width="205" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="63F-VN-UHF"/>
                                 </constraints>
@@ -6220,27 +6251,27 @@ correct choice</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L6-KJ-fuR">
-                                <rect key="frame" x="447" y="1202.5" width="130" height="63.5"/>
+                                <rect key="frame" x="443.5" y="1224" width="137.5" height="42"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
                                 <color key="textColor" name="AppLightBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-zl-iBg">
-                                <rect key="frame" x="614.5" y="1122.5" width="4" height="143.5"/>
+                                <rect key="frame" x="614.5" y="1144" width="4" height="122"/>
                                 <color key="backgroundColor" name="AppLightBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="4" id="Eah-AI-cnc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-JG-JxP">
-                                <rect key="frame" x="405.5" y="1122.5" width="4" height="143.5"/>
+                                <rect key="frame" x="405.5" y="1144" width="4" height="122"/>
                                 <color key="backgroundColor" name="AppLightBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="4" id="9DS-XV-4b6"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPf-gJ-tlF">
-                                <rect key="frame" x="648.5" y="1122.5" width="78.5" height="80"/>
+                                <rect key="frame" x="648.5" y="1144" width="83.5" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="p8Q-dF-8LS"/>
                                 </constraints>
@@ -6249,13 +6280,13 @@ correct choice</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Failure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-u8-7HO">
-                                <rect key="frame" x="631" y="1202.5" width="113" height="63.5"/>
+                                <rect key="frame" x="636.5" y="1224" width="107" height="42"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
                                 <color key="textColor" name="AppLightBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLW-EV-Ozx">
-                                <rect key="frame" x="255" y="1122.5" width="120.5" height="80"/>
+                                <rect key="frame" x="250" y="1144" width="125.5" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="nHo-Zh-qJQ"/>
                                 </constraints>
@@ -6264,7 +6295,7 @@ correct choice</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attempts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBY-hy-L9z">
-                                <rect key="frame" x="238" y="1202.5" width="155" height="63.5"/>
+                                <rect key="frame" x="239.5" y="1224" width="147" height="42"/>
                                 <fontDescription key="fontDescription" name="BalooPaaji-Regular" family="Baloo Paaji" pointSize="36"/>
                                 <color key="textColor" name="AppLightBlue"/>
                                 <nil key="highlightedColor"/>
@@ -6451,8 +6482,11 @@ correct choice</string>
         <image name="Speaker.png" width="61" height="58"/>
         <image name="Tick" width="35.5" height="24"/>
         <image name="camera" width="215.5" height="215.5"/>
+        <image name="firstOpt.png" width="939" height="148"/>
         <image name="gallery" width="215.5" height="215.5"/>
         <image name="graph.png" width="237" height="221"/>
+        <image name="secondOpt.png" width="940" height="196"/>
+        <image name="thirdOpt.png" width="938" height="273"/>
         <image name="yellowStar.png" width="56" height="60"/>
         <namedColor name="AppDarkBlue">
             <color red="0.0" green="0.46299999952316284" blue="0.71799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

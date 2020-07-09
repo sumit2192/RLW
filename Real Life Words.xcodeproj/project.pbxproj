@@ -16,6 +16,9 @@
 		0445558C24911095002CC8D8 /* RhombusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445558B24911095002CC8D8 /* RhombusView.swift */; };
 		0445D2AE24A25CD700A099C8 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445D2AD24A25CD600A099C8 /* graph.png */; };
 		04491F31249E1F9D00BAD9C3 /* listViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04491F30249E1F9D00BAD9C3 /* listViewController.swift */; };
+		044A448E24B5B85600CD6A75 /* secondOpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 044A448B24B5B85500CD6A75 /* secondOpt.png */; };
+		044A448F24B5B85600CD6A75 /* firstOpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 044A448C24B5B85500CD6A75 /* firstOpt.png */; };
+		044A449024B5B85600CD6A75 /* thirdOpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 044A448D24B5B85600CD6A75 /* thirdOpt.png */; };
 		044ACBAA24860BED00E2818D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ACBA624860BED00E2818D /* Main.storyboard */; };
 		044ACBAB24860BED00E2818D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ACBA824860BED00E2818D /* LaunchScreen.storyboard */; };
 		044ACBB224860C4D00E2818D /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ACBAC24860C4D00E2818D /* OneShotLocationManager.swift */; };
@@ -32,6 +35,7 @@
 		04524FF62493A7110040343F /* wordData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04524FF52493A7110040343F /* wordData.json */; };
 		0452501E2493B04E0040343F /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452501C2493B04E0040343F /* WordData.swift */; };
 		0452501F2493B04E0040343F /* WordDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452501D2493B04E0040343F /* WordDataLoader.swift */; };
+		0452517624B4A2AA00D42EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452517524B4A2AA00D42EBE /* ViewController.swift */; };
 		045AF51E24A3164C00D257E4 /* playVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AF51D24A3164C00D257E4 /* playVC.swift */; };
 		045C86B6249F3BD6003870BB /* LetPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 045C86B5249F3BD6003870BB /* LetPlay.png */; };
 		04636E82249CAB55001F92BA /* RewardData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04636E81249CAB55001F92BA /* RewardData.json */; };
@@ -76,6 +80,9 @@
 		0445558B24911095002CC8D8 /* RhombusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhombusView.swift; sourceTree = "<group>"; };
 		0445D2AD24A25CD600A099C8 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
 		04491F30249E1F9D00BAD9C3 /* listViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listViewController.swift; sourceTree = "<group>"; };
+		044A448B24B5B85500CD6A75 /* secondOpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondOpt.png; sourceTree = "<group>"; };
+		044A448C24B5B85500CD6A75 /* firstOpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstOpt.png; sourceTree = "<group>"; };
+		044A448D24B5B85600CD6A75 /* thirdOpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thirdOpt.png; sourceTree = "<group>"; };
 		044ACBA724860BED00E2818D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044ACBA924860BED00E2818D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044ACBAC24860C4D00E2818D /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
@@ -93,6 +100,7 @@
 		04524FF52493A7110040343F /* wordData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordData.json; sourceTree = "<group>"; };
 		0452501C2493B04E0040343F /* WordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		0452501D2493B04E0040343F /* WordDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDataLoader.swift; sourceTree = "<group>"; };
+		0452517524B4A2AA00D42EBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		045AF51D24A3164C00D257E4 /* playVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playVC.swift; sourceTree = "<group>"; };
 		045C86B5249F3BD6003870BB /* LetPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LetPlay.png; sourceTree = "<group>"; };
 		04636E81249CAB55001F92BA /* RewardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RewardData.json; sourceTree = "<group>"; };
@@ -154,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				04524FF72493A82E0040343F /* wordSigns */,
+				044A448C24B5B85500CD6A75 /* firstOpt.png */,
+				044A448B24B5B85500CD6A75 /* secondOpt.png */,
+				044A448D24B5B85600CD6A75 /* thirdOpt.png */,
 				04EC14B724935D68000A1BCB /* Cue1.png */,
 				04EC14B524935D67000A1BCB /* Cue2.png */,
 				04EC14B624935D68000A1BCB /* Cue3.png */,
@@ -232,6 +243,7 @@
 				04491F30249E1F9D00BAD9C3 /* listViewController.swift */,
 				0489718124A0C76D00CFDD9D /* statisticsVC.swift */,
 				045AF51D24A3164C00D257E4 /* playVC.swift */,
+				0452517524B4A2AA00D42EBE /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,8 +393,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044A448E24B5B85600CD6A75 /* secondOpt.png in Resources */,
 				04EAC91A249245F10033136E /* Baloon.png in Resources */,
 				04EAC91E24928A710033136E /* yellowStar.png in Resources */,
+				044A449024B5B85600CD6A75 /* thirdOpt.png in Resources */,
 				04F53700248A2DB500EABAB2 /* Fire.png in Resources */,
 				04524FF62493A7110040343F /* wordData.json in Resources */,
 				044BEB7A24893C7500DD0987 /* selectedList.png in Resources */,
@@ -400,6 +414,7 @@
 				044BEB7C24893C7500DD0987 /* Home.png in Resources */,
 				04EC14B824935D69000A1BCB /* Cue2.png in Resources */,
 				045C86B6249F3BD6003870BB /* LetPlay.png in Resources */,
+				044A448F24B5B85600CD6A75 /* firstOpt.png in Resources */,
 				044BEB7F24893EF900DD0987 /* List.png in Resources */,
 				04EAC918249213240033136E /* Speaker.png in Resources */,
 			);
@@ -484,6 +499,7 @@
 				0452501E2493B04E0040343F /* WordData.swift in Sources */,
 				04F536FE248A212400EABAB2 /* recognizingVC.swift in Sources */,
 				048A24FA2498950300EC969C /* CoreDataStrategy.swift in Sources */,
+				0452517624B4A2AA00D42EBE /* ViewController.swift in Sources */,
 				04491F31249E1F9D00BAD9C3 /* listViewController.swift in Sources */,
 				043F3B0D248DF851001395CB /* AddWordAndSignVC.swift in Sources */,
 				043C2DFF2487BC9F00DE7514 /* createChildVC.swift in Sources */,

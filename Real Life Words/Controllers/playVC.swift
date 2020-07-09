@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import Speech
+
 class playVC: UIViewController {
 
     //MARK:- Variables and outlets
@@ -32,6 +34,11 @@ class playVC: UIViewController {
     var speechSynthesizer = AVSpeechSynthesizer()
     var speechUtterance =  AVSpeechUtterance()
     var samanthaVoice : AVSpeechSynthesisVoice?
+    let speechRecognizer        = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
+
+    var recognitionRequest      : SFSpeechAudioBufferRecognitionRequest?
+    var recognitionTask         : SFSpeechRecognitionTask?
+    let audioEngine             = AVAudioEngine()
     
     var gameId : Int?
     var user : childModel!
@@ -75,6 +82,9 @@ class playVC: UIViewController {
         layout.minimumInteritemSpacing = spacing
         answerCollection.collectionViewLayout = layout
         
+        requestTranscribePermissions()
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +110,20 @@ class playVC: UIViewController {
     
         // MARK:- Custom Methods
         //MARK:-
+    func requestTranscribePermissions() {
+        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
+            DispatchQueue.main.async {
+                if authStatus == .authorized {
+                    print("Good to go!")
+                } else {
+                    print("Transcription permission was declined.")
+                }
+            }
+        }
+    }
     
+
+
     // MARK:- Typing animation on lable
     
     // MARK:- Setting up Answers collection data

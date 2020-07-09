@@ -24,11 +24,11 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Access to Camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need access to the microphone to hear what you have to say.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Access to Photo Library</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>We need access to the microphone to hear what you have to say.</string>
-	<key>NSMicrophoneUsageDescription</key>
 	<string>We need access to the microphone to hear what you have to say.</string>
 	<key>UIAppFonts</key>
 	<array>
@@ -51,6 +51,8 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
