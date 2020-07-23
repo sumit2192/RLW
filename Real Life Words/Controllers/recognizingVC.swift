@@ -62,6 +62,20 @@ class recognizingVC: UIViewController {
     func fetchWords(){
        // let Predicate = NSPredicate(format: "")
         wordsArr = persistenceStrategy.getWord(Entity: Constant().Table.WORDS, predicate: nil)
+        switch game_id {
+        case 3:
+            wordsArr = wordsArr.filter({$0.same_word_id != 0})
+        case 4:
+            wordsArr = wordsArr.filter({$0.opp_word_id != 0})
+        default:
+            print("Default Value")
+           // wordsArr = wordsArr.filter({$0.type == 2})
+        }
+        for wd in wordsArr{
+            print(wd.name!)
+            
+        }
+        //.filter { $0.cat == "garden"}
         if wordsArr.count > 0{
             self.lblTotal.text = String(format: "Total Words: %@", String(wordsArr.count))
             colVw.reloadData()
@@ -185,9 +199,10 @@ class recognizingVC: UIViewController {
     @IBAction func cmdAdd(_ sender: UIButton) {
         baseVw.isHidden = true
         //
+        let totalWords = persistenceStrategy.getWord(Entity: Constant().Table.WORDS, predicate: nil)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.ADD_WORD_SIGN_VC) as! AddWordAndSignVC
         vc.refUser = self.refUser
-        vc.Last_Generated_wordId = wordsArr.count
+        vc.Last_Generated_wordId = totalWords.count
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

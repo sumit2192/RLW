@@ -13,6 +13,9 @@ struct WordData: Codable {
     var word_id: Int
     var sign: String
     var name: String
+    var same_word_id: Int
+    var opp_word_id: Int
+    var type: Int
 
 }
 

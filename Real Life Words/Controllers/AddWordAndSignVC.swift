@@ -9,14 +9,18 @@
 import UIKit
 import CropViewController
 import CoreData
-
+import KRProgressHUD
 class AddWordAndSignVC: UIViewController {
 
     //MARK:- Variables and outlets
     //MARK:-
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var imgSign: UIImageView!
+    @IBOutlet weak var sameImgSign: UIImageView!
+    @IBOutlet weak var OppImgSign: UIImageView!
     @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtSameName: UITextField!
+    @IBOutlet weak var txtOppName: UITextField!
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var fontCollectionVw: UICollectionView!
     @IBOutlet weak var CameraBaseVw: UIView!
@@ -32,12 +36,15 @@ class AddWordAndSignVC: UIViewController {
     var fontColorNameArr : [UIColor]!
     var imagePicker = UIImagePickerController()
     var imagePicked :Bool = false
+    var SameimagePicked :Bool = false
+    var OppimagePicked :Bool = false
     var Last_Generated_wordId : Int?
     
     var arrSelectedTypeIndex = [IndexPath]()
     var arrSelectedColorIndex = [IndexPath]()
     var imageData : Data?
     var colorStr : String?
+    var refImageVw = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +53,22 @@ class AddWordAndSignVC: UIViewController {
         fontColorArr = [UIColor(named: "Color-1")!,UIColor(named: "Color-2")!,UIColor(named: "Color-3")!,UIColor(named: "Color-4")!,UIColor(named: "Color-5")!]
         
         imgSign.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap_image)))
+        sameImgSign.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap_image)))
+        OppImgSign.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap_image)))
         imagePicker.delegate = self
                 // Do any additional setup after loading the view.
     }
    //MARK:- Implement Custom Methods
    //MARK:-
     
-    func createWordWithSuppliedData(data: [String:Any]){
-        word = wordModel(data)
-        let predicate = NSPredicate(format: "name == [c] %@", word.name!)
+    func createWordWithSuppliedData(data: [[String:Any]]){
+        for item in data{
+            word = wordModel(item)
+            self.saveData()
+        }
+       
+        self.navigationController?.popViewController(animated: true)
+/*        let predicate = NSPredicate(format: "name == [c] %@", word.name!)
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Words")
         request.predicate = predicate
         request.returnsObjectsAsFaults = false
@@ -74,7 +88,7 @@ class AddWordAndSignVC: UIViewController {
         }catch{
             print(error.localizedDescription)
                       // return nil
-        }
+        }*/
     }
     
     func saveData(){
@@ -88,16 +102,21 @@ class AddWordAndSignVC: UIViewController {
         newWord.setValue(word.user_name, forKey: "user_name")
         newWord.setValue(word.sign, forKey: "sign")
         newWord.setValue(word.word_id, forKey: "word_id")
+        newWord.setValue(word.same_word_id, forKey: "same_word_id")
+        newWord.setValue(word.opp_word_id, forKey: "opp_word_id")
+        newWord.setValue(word.type, forKey: "type")
         do {
             try context.save()
            // Utility.showKSAlertMessage(title: Constant().TITLE, message: "Word added sucessfully", view: self)
-            self.navigationController?.popViewController(animated: true)
+           // self.navigationController?.popViewController(animated: true)
+            print("new word saved succefully")
         } catch {
             print("Error while saving")
         }
     }
     
     @objc func tap_image(sender:UITapGestureRecognizer){
+        refImageVw = sender.view as! UIImageView
         if CameraBaseVw.isHidden{
             self.CameraBaseVw.isHidden = false
             UIView.animate(withDuration: 0.3) {
@@ -136,6 +155,24 @@ class AddWordAndSignVC: UIViewController {
             Utility.showAlertMessage(title: Constant().TITLE, message: Constant.FONT_COLOR_REQUIRED, view: self)
             return
         }else{
+            let word_id : Int = Last_Generated_wordId!+1
+            var same_id : Int = 0
+            var Opp_id : Int = 0
+            var newWordArr : [[String: Any]] = []
+            if (SameimagePicked && Utility.isTxtFldEmpty(txtSameName)) || (!SameimagePicked && !Utility.isTxtFldEmpty(txtSameName)){
+                Utility.showAlertMessage(title: Constant().TITLE, message: "You are trying to add a word with same meaning.Please provide it's name along with a relevant sign or image", view: self)
+                return
+            }else if (SameimagePicked && !Utility.isTxtFldEmpty(txtSameName)){
+                same_id = Last_Generated_wordId! + 2
+            }
+            
+            if (OppimagePicked && Utility.isTxtFldEmpty(txtOppName)) || (!OppimagePicked && !Utility.isTxtFldEmpty(txtOppName)){
+                Utility.showAlertMessage(title: Constant().TITLE, message: "You are trying to add a word with opposite meaning.Please provide it's name along with a relevant sign or image", view: self)
+                return
+            }else if (OppimagePicked && !Utility.isTxtFldEmpty(txtOppName)){
+                Opp_id = Last_Generated_wordId! + 3
+            }
+            
             imageData = imgSign.image!.pngData()
             let refcolor = fontColorArr[arrSelectedColorIndex[0].row]
             colorStr = refcolor.StringFromUIColor(color: refcolor)
@@ -147,9 +184,50 @@ class AddWordAndSignVC: UIViewController {
                 "parent_email":refUser.parent_email!,
                 "user_name":refUser.name!,
                 "sign": imageData!,
-                "word_id": Last_Generated_wordId!+1
+                "word_id": word_id,
+                "same_word_id": same_id,
+                "opp_word_id" : Opp_id,
+                "type" : 2
             ]
-            self.createWordWithSuppliedData(data: wordData)
+            newWordArr.append(wordData)
+            //self.createWordWithSuppliedData(data: wordData)
+            
+            if same_id > 0{
+                let image = sameImgSign.image?.pngData()
+                let wordData: [String: Any] = [
+                               "font_color": colorStr!,
+                               "font_name": refFont,
+                               "name": txtSameName.text!,
+                               "parent_email":refUser.parent_email!,
+                               "user_name":refUser.name!,
+                               "sign": image!,
+                               "word_id": same_id,
+                               "same_word_id": word_id,
+                               "opp_word_id" : Opp_id,
+                               "type" : 2
+                           ]
+                newWordArr.append(wordData)
+               // self.createWordWithSuppliedData(data: wordData)
+            }
+            
+            if Opp_id > 0{
+                let image = OppImgSign.image?.pngData()
+                let wordData: [String: Any] = [
+                               "font_color": colorStr!,
+                               "font_name": refFont,
+                               "name": txtOppName.text!,
+                               "parent_email":refUser.parent_email!,
+                               "user_name":refUser.name!,
+                               "sign": image!,
+                               "word_id": Opp_id,
+                               "same_word_id": 0,
+                               "opp_word_id" : word_id,
+                               "type" : 2
+                           ]
+                newWordArr.append(wordData)
+               // self.createWordWithSuppliedData(data: wordData)
+            }
+            self.createWordWithSuppliedData(data: newWordArr)
         }
     }
     
@@ -220,8 +298,17 @@ extension AddWordAndSignVC: UIImagePickerControllerDelegate,UINavigationControll
 extension AddWordAndSignVC : CropViewControllerDelegate{
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         // 'image' is the newly cropped version of the original image
-        self.imgSign.image = image
-        self.imagePicked = true
+        self.refImageVw.image = image
+        if self.refImageVw == self.imgSign{
+            self.imagePicked = true
+        }
+        if self.refImageVw == self.sameImgSign{
+            self.SameimagePicked = true
+        }
+        if self.refImageVw == self.OppImgSign{
+            self.OppimagePicked = true
+        }
+        
         self.dismiss(animated: true, completion: nil)
        
     }

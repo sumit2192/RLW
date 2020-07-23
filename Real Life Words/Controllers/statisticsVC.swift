@@ -31,15 +31,83 @@ class statisticsVC: UIViewController {
     var count : Int = 0
     var percrntVal : Double = 40
     var displayId : Int = 1
+    var centerPoint = CGPoint()
     override func viewDidLoad() {
         super.viewDidLoad()
-        imgUser.image = UIImage(data: user.image!)
-        lblName.text = user.name
+//        imgUser.image = UIImage(data: user.image!)
+//        lblName.text = user.name
+//        let arr : [String] = []
+//        print(arr[1])
         successLbl.isHidden = true
         percentLbl.isHidden = true
+        if UIDevice.current.orientation == .portrait{
+            centerPoint = CGPoint(x: 512.0, y: 633.0)
+        }else if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight{
+            centerPoint = CGPoint(x: 683.0, y: 512.0)
+        }
         createPercentageVw()
+        print(view.center)
+
     }
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        self.view.frame = view.bounds
+//    }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        trackLayer.removeFromSuperlayer()
+        progressLayer.removeFromSuperlayer()
+        trackLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        progressLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        trackLayer.fillColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        progressLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        
+        coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+
+            let orient = UIDevice.current.orientation
+
+            switch orient {
+
+            case .portrait:
+
+                print("Portrait")
+                self.centerPoint = CGPoint(x: 512.0, y: 633.0)
+
+            case .landscapeLeft,.landscapeRight :
+
+                print("Landscape")
+                self.centerPoint = CGPoint(x: 683.0, y: 512.0)
+
+            default:
+
+                print("Anything But Portrait")
+            }
+
+            }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+                //refresh view once rotation is completed not in will transition as it returns incorrect frame size.Refresh here
+                print(self.view.center)
+                self.createPercentageVw()
+
+        })
+        super.viewWillTransition(to: size, with: coordinator)
+
+    }
+    @objc func rotated() {
+    
+ //        createPercentageVw()
+//        if UIDevice.current.orientation.isLandscape {
+//            print("Landscape")
+//        }
+//
+//        if UIDevice.current.orientation.isPortrait {
+//            print("Portrait")
+//
+//        }
+//        print(view.center)
+    }
     func createPercentageVw(){
         let center = view.center
         // if you want to draw and animate track anti clockwise
@@ -92,6 +160,7 @@ class statisticsVC: UIViewController {
         successLbl.isHidden = false
         if count == Int(percrntVal) {
             timer.invalidate()
+            count = 0
         }
         
     }

@@ -120,6 +120,9 @@ class CoreDataStrategy: PersistenceStrategy{
         itemEntity.user_name = data["user_name"] as? String
         itemEntity.sign = data["sign"] as? Data
         itemEntity.word_id = Int16(data["word_id"] as! Int)
+        itemEntity.same_word_id = Int16(data["same_word_id"] as! Int)
+        itemEntity.opp_word_id = Int16(data["opp_word_id"] as! Int)
+        itemEntity.type = Int16(data["type"] as! Int)
         do {
             try context.save()
         } catch {
@@ -152,7 +155,10 @@ class CoreDataStrategy: PersistenceStrategy{
                         "parent_email":data.value(forKey: "parent_email")as! String,
                         "user_name":data.value(forKey: "user_name")as! String,
                         "sign": data.value(forKey: "sign")as! Data,
-                        "word_id": data.value(forKey: "word_id")as! Int
+                        "word_id": data.value(forKey: "word_id")as! Int,
+                        "same_word_id": data.value(forKey: "same_word_id")as! Int,
+                        "opp_word_id": data.value(forKey: "opp_word_id")as! Int,
+                        "type": data.value(forKey: "type")as! Int
                     ]
                     arrayofWord.append(wordModel(wordData))
                     

@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
        // self.perform(#selector(loadData), with: nil, afterDelay: 2.0)
+       
         if !DEFAULTS.bool(forKey: Constant().PRELOAD_DATA_STORED){
             self.perform(#selector(loadData), with: nil, afterDelay: 1.0)
         }
@@ -37,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
+
 
     // MARK: - Core Data stack
 
@@ -143,7 +146,10 @@ extension AppDelegate{
                 "parent_email":"",
                 "user_name":"",
                 "sign": imagedata!,
-                "word_id": obj.word_id
+                "word_id": obj.word_id,
+                "same_word_id": obj.same_word_id,
+                "opp_word_id": obj.opp_word_id,
+                "type": obj.type  
             ]
             if let word = persistenceStrategy.addWord(Entity: Constant().Table.WORDS, data: wordData){
                 print(word.name!)

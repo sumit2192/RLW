@@ -63,8 +63,10 @@ class userListViewController: UIViewController {
 
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         childArr.removeAll()
         fetchChild()
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

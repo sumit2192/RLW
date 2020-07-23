@@ -46,6 +46,10 @@ class wordModel: NSObject {
     var sign: Data?
     var user_name: String?
     var word_id: Int?
+    var same_word_id: Int?
+    var opp_word_id: Int?
+    var type: Int?
+    
     init (_ response: [String: Any]){
         self.font_color = response["font_color"] as? String
         self.font_name = response["font_name"] as? String
@@ -54,6 +58,9 @@ class wordModel: NSObject {
         self.user_name = response["user_name"] as? String
         self.sign = response["sign"] as? Data
         self.word_id = response["word_id"] as? Int
+        self.same_word_id = response["same_word_id"] as? Int
+        self.opp_word_id = response["opp_word_id"] as? Int
+        self.type = response["type"] as? Int
 
     }
 }

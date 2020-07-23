@@ -32,8 +32,11 @@
         <attribute name="font_color" optional="YES" attributeType="String"/>
         <attribute name="font_name" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="opp_word_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="parent_email" optional="YES" attributeType="String"/>
+        <attribute name="same_word_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sign" optional="YES" attributeType="Binary"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="user_name" optional="YES" attributeType="String"/>
         <attribute name="word_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
@@ -42,6 +45,6 @@
         <element name="Games" positionX="-27" positionY="72" width="128" height="163"/>
         <element name="Parents" positionX="-27" positionY="18" width="128" height="28"/>
         <element name="Reward_List" positionX="-27" positionY="117" width="128" height="103"/>
-        <element name="Words" positionX="-27" positionY="27" width="128" height="148"/>
+        <element name="Words" positionX="-27" positionY="27" width="128" height="193"/>
     </elements>
 </model>

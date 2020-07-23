@@ -32,7 +32,7 @@
 		044BEB7C24893C7500DD0987 /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 044BEB7824893C7500DD0987 /* Home.png */; };
 		044BEB7D24893C7500DD0987 /* selectedHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 044BEB7924893C7500DD0987 /* selectedHome.png */; };
 		044BEB7F24893EF900DD0987 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 044BEB7E24893EF800DD0987 /* List.png */; };
-		04524FF62493A7110040343F /* wordData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04524FF52493A7110040343F /* wordData.json */; };
+		04501A5324C4029700CC9FE6 /* wordData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04501A5224C4029700CC9FE6 /* wordData.json */; };
 		0452501E2493B04E0040343F /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452501C2493B04E0040343F /* WordData.swift */; };
 		0452501F2493B04E0040343F /* WordDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452501D2493B04E0040343F /* WordDataLoader.swift */; };
 		0452517624B4A2AA00D42EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452517524B4A2AA00D42EBE /* ViewController.swift */; };
@@ -97,7 +97,7 @@
 		044BEB7824893C7500DD0987 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		044BEB7924893C7500DD0987 /* selectedHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedHome.png; sourceTree = "<group>"; };
 		044BEB7E24893EF800DD0987 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
-		04524FF52493A7110040343F /* wordData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordData.json; sourceTree = "<group>"; };
+		04501A5224C4029700CC9FE6 /* wordData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordData.json; sourceTree = "<group>"; };
 		0452501C2493B04E0040343F /* WordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		0452501D2493B04E0040343F /* WordDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDataLoader.swift; sourceTree = "<group>"; };
 		0452517524B4A2AA00D42EBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				04EC14BB24937062000A1BCB /* CDManager.swift */,
 				0452501D2493B04E0040343F /* WordDataLoader.swift */,
 				0452501C2493B04E0040343F /* WordData.swift */,
-				04524FF52493A7110040343F /* wordData.json */,
+				04501A5224C4029700CC9FE6 /* wordData.json */,
 				04636E81249CAB55001F92BA /* RewardData.json */,
 				04BC953F24863A0300BBD74D /* UIKerningTextField.swift */,
 				044ACBAF24860C4D00E2818D /* Alertshelpers.swift */,
@@ -398,13 +398,13 @@
 				04EAC91E24928A710033136E /* yellowStar.png in Resources */,
 				044A449024B5B85600CD6A75 /* thirdOpt.png in Resources */,
 				04F53700248A2DB500EABAB2 /* Fire.png in Resources */,
-				04524FF62493A7110040343F /* wordData.json in Resources */,
 				044BEB7A24893C7500DD0987 /* selectedList.png in Resources */,
 				04BC953E2486317F00BBD74D /* baloo_paaji_regular.ttf in Resources */,
 				044ACBAB24860BED00E2818D /* LaunchScreen.storyboard in Resources */,
 				04EAC91C24926AF20033136E /* Play.png in Resources */,
 				04EC14BA24935D69000A1BCB /* Cue1.png in Resources */,
 				0445D2AE24A25CD700A099C8 /* graph.png in Resources */,
+				04501A5324C4029700CC9FE6 /* wordData.json in Resources */,
 				0498A71C2484C70D00A3877E /* Assets.xcassets in Resources */,
 				044BEB7D24893C7500DD0987 /* selectedHome.png in Resources */,
 				044ACBAA24860BED00E2818D /* Main.storyboard in Resources */,
@@ -653,6 +653,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L34USYR2H3;
 				INFOPLIST_FILE = "Real Life Words/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,6 +675,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = L34USYR2H3;
 				INFOPLIST_FILE = "Real Life Words/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

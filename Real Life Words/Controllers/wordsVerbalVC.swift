@@ -108,6 +108,7 @@ class wordsVerbalVC: UIViewController {
                 refDict.setValue(Constant().Verbal.FIND, forKey: "vis_id")
             }else{
                 refDict.setValue(Constant().Verbal.FIND, forKey: "viw_id")
+                refDict.setValue(Constant().Verbal.FIND, forKey: "vis_id")
             }
         case 2:
             self.changeBlurFrameWithRespectTo(view: btnSelectWord)
@@ -115,6 +116,7 @@ class wordsVerbalVC: UIViewController {
                 refDict.setValue(Constant().Verbal.SELECT, forKey: "vis_id")
             }else{
                 refDict.setValue(Constant().Verbal.SELECT, forKey: "viw_id")
+                refDict.setValue(Constant().Verbal.SELECT, forKey: "vis_id")
             }
         case 3:
             self.changeBlurFrameWithRespectTo(view: btnTouchWord)
@@ -122,26 +124,28 @@ class wordsVerbalVC: UIViewController {
                 refDict.setValue(Constant().Verbal.TOUCH, forKey: "vis_id")
             }else{
                 refDict.setValue(Constant().Verbal.TOUCH, forKey: "viw_id")
+                refDict.setValue(Constant().Verbal.TOUCH, forKey: "vis_id")
             }
         default:
             //MARK:- Select Button Action
             if gameExist{
                 let key = isSign ? "vis_id" : "viw_id"
-                updateOption(optionid: refDict.value(forKey: key) as! Int, Key: key)
+                updateOption(optionid: refDict.value(forKey: "viw_id") as! Int, Key: "viw_id")
+                updateOption(optionid: refDict.value(forKey: "viw_id") as! Int, Key: "vis_id")
             }
             
-            if isSign{
+            //if isSign{
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.REWARDS_VC) as! rewardsVC
                 vc.refDict = refDict
                 vc.gameArr = gameArr
                 self.navigationController?.pushViewController(vc, animated: true)
-            }else{
+            /*}else{
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.WORD_VERBAL_VC) as! wordsVerbalVC
                 vc.refDict = refDict
                 vc.isSign = true
                 vc.gameArr = gameArr
                 self.navigationController?.pushViewController(vc, animated: true)
-            }
+            }*/
             
         }
     }
