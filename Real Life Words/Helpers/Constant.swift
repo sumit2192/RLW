@@ -177,6 +177,7 @@ struct TableName {
     let WORDS = "Words"
     let GAMES = "Games"
     let REWARD = "Reward_List"
+    let SUMMARY = "Summary"
 }
 
 struct OptionName {

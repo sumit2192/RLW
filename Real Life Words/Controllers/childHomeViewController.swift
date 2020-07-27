@@ -132,6 +132,7 @@ class childHomeViewController: UIViewController {
     @IBAction func cmdGetStatistics(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.STATISTIC_VC) as! statisticsVC
         vc.user = self.user
+        vc.fromStatistics = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -14,7 +14,7 @@ class playVC: UIViewController {
 
     //MARK:- Variables and outlets
     @IBOutlet weak var btnCancel: UIButton!
-    @IBOutlet weak var lblQuestionCount: UILabel!
+   // @IBOutlet weak var lblQuestionCount: UILabel!
     
     @IBOutlet weak var speakerVw: UIView!
     @IBOutlet weak var btnSound: UIButton!
@@ -61,6 +61,13 @@ class playVC: UIViewController {
     var tagArr : [Int] = []
     var indexarr : [Int] = []
     var shouldPlayReward : Bool = false
+    
+    var attemptCount : Int = 0
+    var rightCount : Int = 0
+    var wrongCount : Int = 0
+    var refSummary : summaryModel!
+    var summaryArr : [summaryModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -103,6 +110,7 @@ class playVC: UIViewController {
             GetWords(wordId: Int(id)!)
         }
         totalQues = wordArr.count * 2
+        attemptCount = totalQues
         getReward()
         setUpAnswers()
         setupQuestion()
@@ -229,7 +237,7 @@ class playVC: UIViewController {
      // MARK:- Setting up questions
     func setupQuestion(){
         // 1. Count of question
-        lblQuestionCount.text = String(format: "%d/%d",currentQues ,totalQues)
+       // lblQuestionCount.text = String(format: "%d/%d",currentQues ,totalQues)
         
         //2. Find word for half and Find Sign for half
         if currentQues > totalQues/2{
@@ -489,7 +497,8 @@ class playVC: UIViewController {
 
                 if self.shouldPlayReward{
                   if speechStr == refString {
-                      self.playSoundWith(SpeechString: self.refReward.reward_Text!)
+                    self.playSoundWith(SpeechString: self.refReward.reward_Text!)
+                    self.rightCount += 1
                   }else{
                       self.playSoundWith(SpeechString: "Wrong Answer")
                   }
@@ -526,9 +535,53 @@ class playVC: UIViewController {
             self.answerCollection.reloadData()
             currentQues += 1
             setupQuestion()
+        }else{
+            wrongCount = attemptCount - rightCount
+            let summaryData: [String: Any] = ["game_id": gameId!,
+                "child_id": user.child_id!,
+                "attempts": attemptCount,
+                "right_ans": rightCount,
+                "wrong_ans": wrongCount]
+            
+            fetchSummary(data: summaryData)
         }
     }
     
+    func fetchSummary(data: [String:Any]){
+        refSummary = summaryModel(data)
+        let Predicate = NSPredicate(format: "child_id == %@ AND game_id == %@", String(refSummary.child_id!),String(refSummary.game_id!))
+         summaryArr = persistenceStrategy.getSummary(Entity: Constant().Table.SUMMARY, predicate: Predicate)
+        if summaryArr.count == 0{
+            saveSummary(Data: data)
+        }else{
+            
+            let summaryData: [String: Any] = ["game_id": gameId!,
+            "child_id": user.child_id!,
+            "attempts": summaryArr[0].attempts! + attemptCount,
+            "right_ans": summaryArr[0].right_ans! + rightCount,
+            "wrong_ans": summaryArr[0].wrong_ans! + wrongCount]
+           deleteSummary(Data: summaryData)
+        }
+    }
+
+    func saveSummary(Data: [String:Any]){
+       
+        if let sum : summaryModel = persistenceStrategy.addSummary(Entity: Constant().Table.SUMMARY, data: Data){
+            print(sum.attempts!)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.STATISTIC_VC) as! statisticsVC
+            vc.summary = refSummary
+            vc.user = user
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func deleteSummary(Data: [String:Any]){
+        let Predicate = NSPredicate(format: "child_id == %@ AND game_id == %@", String(refSummary.child_id!),String(refSummary.game_id!))
+        persistenceStrategy.deleteItem(Entity: Constant().Table.SUMMARY, predicate: Predicate) {
+            print("Deleted")
+            self.saveSummary(Data: Data)
+        }
+    }
      //MARK:- Button Actions
     
     @IBAction func cmdCancel(_ sender: UIButton) {
@@ -666,6 +719,7 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                     if refReward.reward_Type == Constant().RewardType.AUDIO{
                         self.playSoundWith(SpeechString: refReward.reward_Text!)
                     }
+                    self.rightCount += 1
                 }else{
                     var iPath = IndexPath()
                     if let ind = wordArr.firstIndex(where: { $0.word_id == refWord.word_id }){
@@ -694,6 +748,7 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                     }
                     if indexarr.count == 0{
                         self.playSoundWith(SpeechString: refReward.reward_Text!)
+                        self.rightCount += 1
                         self.tagArr.append(collectionView.tag)
                         self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
                     }
@@ -723,6 +778,7 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                     }
                     if indexarr.count == 0{
                         self.playSoundWith(SpeechString: refReward.reward_Text!)
+                        self.rightCount += 1
                         self.tagArr.append(collectionView.tag)
                         self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
                     }

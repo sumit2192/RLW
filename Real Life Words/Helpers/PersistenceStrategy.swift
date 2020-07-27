@@ -26,6 +26,9 @@ protocol PersistenceStrategy: class {
     func addGame(Entity: String, data: [String:Any]) -> gameModel?
     func getGame(Entity: String, predicate: NSPredicate) -> [gameModel]
     
+    func addSummary(Entity: String, data: [String:Any]) -> summaryModel?
+    func getSummary(Entity: String, predicate: NSPredicate) -> [summaryModel]
+    
     func editItem(Entity: String, predicate: NSPredicate, newData: Any, dataType: String, dataKey: String, success: @escaping () -> ())
     func deleteItem(Entity: String, predicate: NSPredicate, success: @escaping () -> ())
     

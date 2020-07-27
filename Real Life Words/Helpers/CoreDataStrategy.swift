@@ -274,6 +274,57 @@ class CoreDataStrategy: PersistenceStrategy{
             return arrayofGame
         }
     }
+    
+    // MARK: - Add Summary
+    func addSummary(Entity: String, data: [String:Any]) -> summaryModel? {
+        
+        let itemEntity = NSEntityDescription.insertNewObject(forEntityName: Entity, into: context) as! Summary
+        itemEntity.game_id = Int16(data["game_id"] as! Int)
+        itemEntity.child_id = Int16(data["child_id"] as! Int)
+        itemEntity.attempts = Int16(data["attempts"] as! Int)
+        itemEntity.right_ans = Int16(data["right_ans"] as! Int)
+        itemEntity.wrong_ans = Int16(data["wrong_ans"] as! Int)
+        do {
+            try context.save()
+        } catch {
+            print(error)
+            return nil
+        }
+        
+        return summaryModel(data)
+    }
+    
+      // MARK: - Read Summary
+      // MARK:-
+    func getSummary(Entity: String, predicate: NSPredicate) -> [summaryModel]{
+        var arrayOfSummary : [summaryModel] = []
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Entity)
+        fetchRequest.predicate = predicate
+        
+        do {
+            let result = try context.fetch(fetchRequest)
+            if result.count == 0{
+                return arrayOfSummary
+            }else{
+                for data in result as! [NSManagedObject] {
+                    let gameData: [String: Any] = [
+                        "game_id": data.value(forKey: "game_id")as! Int,
+                        "child_id":data.value(forKey: "child_id")as! Int,
+                        "attempts":data.value(forKey: "attempts")as! Int,
+                        "right_ans":data.value(forKey: "right_ans")as! Int,
+                        "wrong_ans": data.value(forKey: "wrong_ans")as! Int
+                    ]
+                    arrayOfSummary.append(summaryModel(gameData))
+                    
+                }
+                return arrayOfSummary
+            }
+            
+        } catch {
+            print("Couldn't get items from Core Data")
+            return arrayOfSummary
+        }
+    }
     // MARK: - Update
     func editItem(Entity: String, predicate: NSPredicate, newData: Any, dataType: String, dataKey: String, success: @escaping () -> ()) {
         

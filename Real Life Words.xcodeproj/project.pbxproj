@@ -67,6 +67,7 @@
 		04F53700248A2DB500EABAB2 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F536FF248A2DB400EABAB2 /* Fire.png */; };
 		04F53704248A7F7D00EABAB2 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F53703248A7F7C00EABAB2 /* Cancel.png */; };
 		04FEBC0624975FA2003EE9A5 /* gameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEBC0524975FA2003EE9A5 /* gameModel.swift */; };
+		7F1E2F7224CAE1F200A7D4C8 /* summaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1E2F7124CAE1F200A7D4C8 /* summaryModel.swift */; };
 		92413EFEDEDABFD0D0BFBB55 /* Pods_Real_Life_Words.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BCF8829A7BA6FCFC9F9D3F8 /* Pods_Real_Life_Words.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		04FEBC0524975FA2003EE9A5 /* gameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameModel.swift; sourceTree = "<group>"; };
 		4BCF8829A7BA6FCFC9F9D3F8 /* Pods_Real_Life_Words.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Life_Words.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		548EB85C8AEEAAB7B3400FB2 /* Pods-Real Life Words.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real Life Words.release.xcconfig"; path = "Target Support Files/Pods-Real Life Words/Pods-Real Life Words.release.xcconfig"; sourceTree = "<group>"; };
+		7F1E2F7124CAE1F200A7D4C8 /* summaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = summaryModel.swift; sourceTree = "<group>"; };
 		C77265DAB69FBAB0FDBFA9D3 /* Pods-Real Life Words.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real Life Words.debug.xcconfig"; path = "Target Support Files/Pods-Real Life Words/Pods-Real Life Words.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 			children = (
 				04BC95472486816700BBD74D /* parentModel.swift */,
 				04FEBC0524975FA2003EE9A5 /* gameModel.swift */,
+				7F1E2F7124CAE1F200A7D4C8 /* summaryModel.swift */,
 			);
 			path = "Model Classes";
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				0498A7142484C70D00A3877E /* RegisterViewController.swift in Sources */,
 				04FEBC0624975FA2003EE9A5 /* gameModel.swift in Sources */,
 				0498A71A2484C70D00A3877E /* Real_Life_Words.xcdatamodeld in Sources */,
+				7F1E2F7224CAE1F200A7D4C8 /* summaryModel.swift in Sources */,
 				044ACBB424860C4D00E2818D /* Extension.swift in Sources */,
 				043C2DFD24878ADC00DE7514 /* userListViewController.swift in Sources */,
 				044ACBB324860C4D00E2818D /* Utility.swift in Sources */,

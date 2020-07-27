@@ -24,7 +24,9 @@ class statisticsVC: UIViewController {
     @IBOutlet weak var lblWrongCount: UILabel!
     
     var user : childModel!
-    
+    var summary : summaryModel!
+    var summaryArr : [summaryModel] = []
+    var fromStatistics : Bool = false
     let progressLayer = CAShapeLayer()
     let trackLayer = CAShapeLayer()
     var timer = Timer()
@@ -32,31 +34,59 @@ class statisticsVC: UIViewController {
     var percrntVal : Double = 40
     var displayId : Int = 1
     var centerPoint = CGPoint()
+    var line_Width = UIDevice.current.orientation.isPortrait ? 40.0 : 30.0
+    @IBOutlet weak var widthConst: NSLayoutConstraint!
+    var baseForCircleVW : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        imgUser.image = UIImage(data: user.image!)
-//        lblName.text = user.name
-//        let arr : [String] = []
-//        print(arr[1])
         successLbl.isHidden = true
         percentLbl.isHidden = true
-        if UIDevice.current.orientation == .portrait{
-            centerPoint = CGPoint(x: 512.0, y: 633.0)
-        }else if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight{
-            centerPoint = CGPoint(x: 683.0, y: 512.0)
+        imgUser.image = UIImage(data: user.image!)
+        lblName.text = user.name
+        
+        if !fromStatistics{
+            percrntVal = (Double(summary.right_ans!) / Double(summary.attempts!)) * 100
+            lblAttemptCount.text = String(summary.attempts!)
+            lblRightCount.text = String(summary.right_ans!)
+            lblWrongCount.text = String(summary.wrong_ans!)
+            btnChooseGame.isUserInteractionEnabled = false
+            switch summary.game_id! {
+            case 1:
+                self.btnChooseGame.setTitle("Recognizing words & Signs", for: .normal)
+            case 2:
+                self.btnChooseGame.setTitle("Say It", for: .normal)
+            case 3:
+                self.btnChooseGame.setTitle("Find the Same", for: .normal)
+            default:
+                self.btnChooseGame.setTitle("Find the Opposite", for: .normal)
+            }
+        }else{
+            fetchSummary(gameid: 1)
         }
-        createPercentageVw()
-        print(view.center)
 
     }
-    override func viewWillAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        if UIDevice.current.orientation.isPortrait{
+            self.centerPoint = CGPoint(x: 512.0, y: 633.0)
+            let newConstraint = self.widthConst.constraintWithMultiplier(1/4)
+            self.view.removeConstraint(self.widthConst)
+            self.view.addConstraint(newConstraint)
+            self.view.layoutIfNeeded()
+            self.widthConst = newConstraint
+            self.line_Width = 40.0
+        }else{
+            self.centerPoint = CGPoint(x: 683.0, y: 512.0)
+            let newConstraint = self.widthConst.constraintWithMultiplier(1/6)
+            self.view.removeConstraint(self.widthConst)
+            self.view.addConstraint(newConstraint)
+            self.view.layoutIfNeeded()
+            self.widthConst = newConstraint
+            self.line_Width = 30.0
+        }
+        createPercentageVw()
     }
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        self.view.frame = view.bounds
-//    }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         trackLayer.removeFromSuperlayer()
         progressLayer.removeFromSuperlayer()
@@ -75,11 +105,23 @@ class statisticsVC: UIViewController {
 
                 print("Portrait")
                 self.centerPoint = CGPoint(x: 512.0, y: 633.0)
+                let newConstraint = self.widthConst.constraintWithMultiplier(1/4)
+                self.view.removeConstraint(self.widthConst)
+                self.view.addConstraint(newConstraint)
+                self.view.layoutIfNeeded()
+                self.widthConst = newConstraint
+                self.line_Width = 40.0
 
             case .landscapeLeft,.landscapeRight :
 
                 print("Landscape")
                 self.centerPoint = CGPoint(x: 683.0, y: 512.0)
+                let newConstraint = self.widthConst.constraintWithMultiplier(1/6)
+                self.view.removeConstraint(self.widthConst)
+                self.view.addConstraint(newConstraint)
+                self.view.layoutIfNeeded()
+                self.widthConst = newConstraint
+                self.line_Width = 30.0
 
             default:
 
@@ -89,24 +131,40 @@ class statisticsVC: UIViewController {
             }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
                 //refresh view once rotation is completed not in will transition as it returns incorrect frame size.Refresh here
                 print(self.view.center)
+                if UIDevice.current.orientation.isPortrait{
+                    self.baseForCircleVW = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width/4, height: self.view.frame.width/4))
+                }else{
+                    self.baseForCircleVW = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width/6, height: self.view.frame.width/6))
+                }
+                self.baseForCircleVW.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+                self.baseForCircleVW.center = self.view.center
                 self.createPercentageVw()
 
         })
         super.viewWillTransition(to: size, with: coordinator)
 
     }
-    @objc func rotated() {
     
- //        createPercentageVw()
-//        if UIDevice.current.orientation.isLandscape {
-//            print("Landscape")
-//        }
-//
-//        if UIDevice.current.orientation.isPortrait {
-//            print("Portrait")
-//
-//        }
-//        print(view.center)
+    func fetchSummary(gameid: Int){
+        
+        let Predicate = NSPredicate(format: "child_id == %@ AND game_id == %@", String(user.child_id!),String(gameid))
+         summaryArr = persistenceStrategy.getSummary(Entity: Constant().Table.SUMMARY, predicate: Predicate)
+        if summaryArr.count == 0{
+            self.percrntVal = 0
+            self.count = 0
+            self.successLbl.isHidden = true
+            self.percentLbl.isHidden = true
+            self.percentLbl.text = "0%"
+            self.lblAttemptCount.text = "0"
+            self.lblRightCount.text = "0"
+            self.lblWrongCount.text = "0"
+        }else{
+            let sum = summaryArr[0]
+            percrntVal = (Double(sum.right_ans!) / Double(sum.attempts!)) * 100
+            lblAttemptCount.text = String(sum.attempts!)
+            lblRightCount.text = String(sum.right_ans!)
+            lblWrongCount.text = String(sum.wrong_ans!)
+        }
     }
     func createPercentageVw(){
         let center = view.center
@@ -120,7 +178,7 @@ class statisticsVC: UIViewController {
         //let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) //red - 255 51 51
-        trackLayer.lineWidth = 50
+        trackLayer.lineWidth = CGFloat(line_Width)
         trackLayer.fillColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         trackLayer.lineCap = .butt
         view.layer.addSublayer(trackLayer)
@@ -128,7 +186,7 @@ class statisticsVC: UIViewController {
         //create progress layer
         progressLayer.path = circularPath.cgPath
         progressLayer.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0) //green - 0 227 50
-        progressLayer.lineWidth = 50
+        progressLayer.lineWidth = CGFloat(line_Width)
         progressLayer.strokeEnd = 0
         progressLayer.fillColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         progressLayer.lineCap = .butt
@@ -167,7 +225,16 @@ class statisticsVC: UIViewController {
     
     //MARK:- Implemet button actions
     @IBAction func cmdBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        if fromStatistics{
+            self.navigationController?.popViewController(animated: true)
+        }else{
+            for vc in self.navigationController!.viewControllers{
+                if vc.isKind(of: childHomeViewController.self){
+                    self.navigationController?.popToViewController(vc, animated: true)
+                }
+            }
+        }
+        
     }
     @IBAction func cmdChooseGameType(_ sender: UIButton) {
         
@@ -187,10 +254,11 @@ class statisticsVC: UIViewController {
         { _ in
             self.btnChooseGame.setTitle("Recognizing words & Signs", for: .normal)
             self.displayId = 1
-            self.percrntVal = 30
+            self.percrntVal = 0
             self.count = 0
             self.successLbl.isHidden = true
             self.percentLbl.isHidden = true
+            self.fetchSummary(gameid: 1)
             self.createPercentageVw()
         }
         actionpopup.addAction(firstGame)
@@ -200,10 +268,11 @@ class statisticsVC: UIViewController {
         { _ in
             self.btnChooseGame.setTitle("Say it", for: .normal)
             self.displayId = 2
-            self.percrntVal = 73
+            self.percrntVal = 0
             self.count = 0
             self.successLbl.isHidden = true
             self.percentLbl.isHidden = true
+            self.fetchSummary(gameid: 2)
             self.createPercentageVw()
         }
         actionpopup.addAction(seondGame)
@@ -213,10 +282,11 @@ class statisticsVC: UIViewController {
         { _ in
             self.btnChooseGame.setTitle("Find The Same", for: .normal)
             self.displayId = 3
-            self.percrntVal = 55
+            self.percrntVal = 0
             self.count = 0
             self.successLbl.isHidden = true
             self.percentLbl.isHidden = true
+            self.fetchSummary(gameid: 3)
             self.createPercentageVw()
         }
         actionpopup.addAction(thirdGame)
@@ -226,10 +296,11 @@ class statisticsVC: UIViewController {
         { _ in
             self.btnChooseGame.setTitle("Find The Opposite", for: .normal)
             self.displayId = 4
-            self.percrntVal = 82
+            self.percrntVal = 0
             self.count = 0
             self.successLbl.isHidden = true
             self.percentLbl.isHidden = true
+            self.fetchSummary(gameid: 4)
             self.createPercentageVw()
         }
         actionpopup.addAction(fourthGame)
@@ -258,4 +329,10 @@ class statisticsVC: UIViewController {
         self.present(actionpopup, animated: true, completion: nil)
     }
     
+}
+
+extension NSLayoutConstraint {
+    func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: self.firstItem!, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
+    }
 }
