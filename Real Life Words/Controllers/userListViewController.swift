@@ -9,7 +9,14 @@
 import UIKit
 import CoreData
 import AVFoundation
-class userListViewController: UIViewController {
+import Braintree
+import BraintreeDropIn
+
+class userListViewController: UIViewController, BTThreeDSecureRequestDelegate {
+    func onLookupComplete(_ request: BTThreeDSecureRequest, result: BTThreeDSecureLookup, next: @escaping () -> Void) {
+        
+    }
+    
 
     var speechSynthesizer = AVSpeechSynthesizer()
     var speechUtterance =  AVSpeechUtterance()
@@ -28,14 +35,43 @@ class userListViewController: UIViewController {
     @IBOutlet weak var lblpremiumInfo: UILabel!
     @IBOutlet weak var btnUnlock: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var testImg: UIImageView!
     
     var refChild : childModel!
     var childArr: [childModel] = []
     var cdManager = CDManager()
+    var braintreeClient: BTAPIClient?
+    var paymentMethod : BTPaymentMethodNonce?
+    var dataCollector : BTDataCollector?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+                
+        /************************ Load GIF image Using Name ********************/
+        
+//        let jeremyGif = UIImage.gifImageWithName("funny")
+//        let imageView = UIImageView(image: jeremyGif)
+//        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
+//        view.addSubview(imageView)
+//        
+        
+//        /************************ Load GIF image Using Data ********************/
+//
+//        let imageData = try? Data(contentsOf: Bundle.main.url(forResource: "play", withExtension: "gif")!)
+//        let advTimeGif = UIImage.gifImageWithData(imageData!)
+//        let imageView2 = UIImageView(image: advTimeGif)
+//        imageView2.frame = CGRect(x: 20.0, y: 220.0, width: self.view.frame.size.width - 40, height: 150.0)
+//        view.addSubview(imageView2)
+//
+//        /************************ Load GIF image URL **************************/
+//
+//        let gifURL : String = "http://www.gifbin.com/bin/4802swswsw04.gif"
+//        let imageURL = UIImage.gifImageWithURL(gifURL)
+//        let imageView3 = UIImageView(image: imageURL)
+//        imageView3.frame = CGRect(x: 20.0, y: 390.0, width: self.view.frame.size.width - 40, height: 150.0)
+//        view.addSubview(imageView3)
+        
         btnCreate.setButtonTitle(Title: "Create User")
         btnGo.setButtonTitle(Title: "Go")
         tctPass.addSahadow()
@@ -57,23 +93,57 @@ class userListViewController: UIViewController {
         
         cdManager.fetchDataFrom(table: Constant().Table.CHILDREN, predicateFormat: "") { (status) in
             if status == 1{
-                self.premiumVw.isHidden = false
+                if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS){
+                    self.premiumVw.isHidden = false
+                }else{
+                    self.premiumVw.isHidden = false
+                }
+                
             }
         }
 
     }
     override func viewWillAppear(_ animated: Bool) {
-        
         childArr.removeAll()
         fetchChild()
-
+        
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touches.first?.view == blurVw{
             blurVw.isHidden = true
             passVw.isHidden = true
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+      
+        
+        coordinator.animate(alongsideTransition: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+
+            let orient = UIDevice.current.orientation
+
+            switch orient {
+                
+            case .portrait:
+                print("Portrait")
+                
+            case .landscapeLeft,.landscapeRight :
+                print("Landscape")
+                
+            default:
+                print("Anything But Portrait")
+            }
+
+            }, completion: { (UIViewControllerTransitionCoordinatorContext) -> Void in
+                //refresh view once rotation is completed not in will transition as it returns incorrect frame size.Refresh here
+                self.premiumVw.frame = CGRect(x: 0, y: self.view.frame.maxY - self.premiumVw.frame.height, width: self.view.frame.width, height: self.premiumVw.frame.height)
+                
+
+        })
+        super.viewWillTransition(to: size, with: coordinator)
+
     }
     
     func setAttributedString() -> NSAttributedString{
@@ -130,7 +200,77 @@ class userListViewController: UIViewController {
     }
     @IBAction func cmdUnlock(_ sender: UIButton) {
         premiumVw.isHidden = true
+        showDropIn(clientTokenOrTokenizationKey: "sandbox_bnbny459_3j7842rnbqm73ygn")
+        
     }
+    
+    @IBAction func cmdPay(_ sender: UIButton) {
+       // showActionSheet()
+       // guard let paymentMethodNonce = self.paymentMethod?.nonce else {
+        //   showDropIn(clientTokenOrTokenizationKey: "sandbox_bnbny459_3j7842rnbqm73ygn")
+       //    return
+      // }
+       // print(paymentMethodNonce)
+
+
+      // createTransaction(params: ["payment_method_nonce" : paymentMethodNonce])
+    }
+    
+    func showDropIn(clientTokenOrTokenizationKey: String) {
+        
+        let req = BTPayPalRequest(amount: "1")
+        req.currencyCode = "USD"
+        
+        let threeDSecureRequest = BTThreeDSecureRequest()
+        threeDSecureRequest.threeDSecureRequestDelegate = self
+
+        threeDSecureRequest.amount = 1.00
+        threeDSecureRequest.email = "test@example.com"
+    
+        
+        let request =  BTDropInRequest()
+       // request.payPalRequest = req
+        request.threeDSecureRequest = threeDSecureRequest
+        let dropIn = BTDropInController(authorization: clientTokenOrTokenizationKey, request: request)
+        { (controller, result, error) in
+            if (error != nil) {
+                print("ERROR")
+                print(error!.localizedDescription)
+            } else if (result?.isCancelled == true) {
+                print("CANCELLED")
+            } else if let result = result {
+
+                self.paymentMethod = result.paymentMethod
+                self.callPaymentWS(nonce: self.paymentMethod!.nonce)
+            }
+            controller.dismiss(animated: true, completion: nil)
+        }
+        
+        self.present(dropIn!, animated: true, completion: nil)
+    }
+    
+    func callPaymentWS(nonce: String){
+        let param : [String: Any] = ["device_data": DEFAULTS.string(forKey: Constant().UD_SUPER_USER_EMAIL)!,
+                                     "nonce_id" : nonce]
+        DataManager.alamofirePostRequestWithDictionary(url: BASE_URL + PAYMENT_URL, viewcontroller: self, parameters: param as [String: Any] as [String : AnyObject]) { (responseObject, error,responseDict)  in
+        
+            print(responseObject ?? "")
+            
+            let arrayValueInfo = responseObject?.dictionaryValue
+            
+                if let responseCode = arrayValueInfo?["status"]?.boolValue {
+                    if responseCode == true {
+                        DEFAULTS.set(true, forKey: Constant().UD_SUBSCRIPTION_STATUS)
+                        Utility.showAlertMessage(title: Constant().TITLE, message: "Paymet Successful", view: self)
+                       // completion(responseCode)
+                        return
+                    }
+            }
+            Utility.showAlertMessage(title: "Oops!", message: Constant().ERROR_MSG, view: self)
+            //completion(false)
+        }
+    }
+
 }
 //MARK:- Implement TableView delegate methods
 //MARK:-
@@ -204,3 +344,44 @@ class UserCell:UITableViewCell{
     @IBOutlet weak var lblGmeLeft: UILabel!
     //  var isRequestTypeCell: Bool?
 }
+
+extension userListViewController: BTViewControllerPresentingDelegate,BTAppSwitchDelegate,BTDropInControllerDelegate{
+    func reloadDropInData() {
+        
+    }
+    
+    func editPaymentMethods(_ sender: Any) {
+        
+    }
+    
+    func paymentDriver(_ driver: Any, requestsPresentationOf viewController: UIViewController) {
+        
+    }
+    
+    func paymentDriver(_ driver: Any, requestsDismissalOf viewController: UIViewController) {
+        
+    }
+    
+    func appSwitcherWillPerformAppSwitch(_ appSwitcher: Any) {
+        
+    }
+    
+    func appSwitcher(_ appSwitcher: Any, didPerformSwitchTo target: BTAppSwitchTarget) {
+        
+    }
+    
+    func appSwitcherWillProcessPaymentInfo(_ appSwitcher: Any) {
+        
+    }
+    
+    
+}
+/* For client authorization,
+// get your tokenization key from the Control Panel
+// or fetch a client token
+let braintreeClient = BTAPIClient(authorization: "<#CLIENT_AUTHORIZATION#>")!
+let cardClient = BTCardClient(apiClient: braintreeClient)
+let card = BTCard(number: "4111111111111111", expirationMonth: "12", expirationYear: "2018", cvv: nil)
+cardClient.tokenizeCard(card) { (tokenizedCard, error) in
+    // Communicate the tokenizedCard.nonce to your server, or handle error
+}*/

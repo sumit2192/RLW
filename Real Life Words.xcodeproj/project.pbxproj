@@ -15,6 +15,7 @@
 		0445558A24910BAE002CC8D8 /* optionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445558924910BAE002CC8D8 /* optionVC.swift */; };
 		0445558C24911095002CC8D8 /* RhombusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445558B24911095002CC8D8 /* RhombusView.swift */; };
 		0445D2AE24A25CD700A099C8 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445D2AD24A25CD600A099C8 /* graph.png */; };
+		0447D12224D19141003F6DDC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447D12124D19141003F6DDC /* DataManager.swift */; };
 		04491F31249E1F9D00BAD9C3 /* listViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04491F30249E1F9D00BAD9C3 /* listViewController.swift */; };
 		044A448E24B5B85600CD6A75 /* secondOpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 044A448B24B5B85500CD6A75 /* secondOpt.png */; };
 		044A448F24B5B85600CD6A75 /* firstOpt.png in Resources */ = {isa = PBXBuildFile; fileRef = 044A448C24B5B85500CD6A75 /* firstOpt.png */; };
@@ -33,9 +34,12 @@
 		044BEB7D24893C7500DD0987 /* selectedHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 044BEB7924893C7500DD0987 /* selectedHome.png */; };
 		044BEB7F24893EF900DD0987 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 044BEB7E24893EF800DD0987 /* List.png */; };
 		04501A5324C4029700CC9FE6 /* wordData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04501A5224C4029700CC9FE6 /* wordData.json */; };
+		0451AF2D24D2A34000E2524C /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451AF2C24D2A34000E2524C /* iOSDevCenters+GIF.swift */; };
+		0451AF2F24D2A3B500E2524C /* funny.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0451AF2E24D2A3B500E2524C /* funny.gif */; };
+		0451AF3924D2AF3900E2524C /* RecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451AF3824D2AF3900E2524C /* RecordingVC.swift */; };
+		0451AF3B24D2B85700E2524C /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0451AF3A24D2B85700E2524C /* giphy.gif */; };
 		0452501E2493B04E0040343F /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452501C2493B04E0040343F /* WordData.swift */; };
 		0452501F2493B04E0040343F /* WordDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452501D2493B04E0040343F /* WordDataLoader.swift */; };
-		0452517624B4A2AA00D42EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452517524B4A2AA00D42EBE /* ViewController.swift */; };
 		045AF51E24A3164C00D257E4 /* playVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AF51D24A3164C00D257E4 /* playVC.swift */; };
 		045C86B6249F3BD6003870BB /* LetPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 045C86B5249F3BD6003870BB /* LetPlay.png */; };
 		04636E82249CAB55001F92BA /* RewardData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04636E81249CAB55001F92BA /* RewardData.json */; };
@@ -51,6 +55,7 @@
 		04BC954224865D6200BBD74D /* TermsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC954124865D6200BBD74D /* TermsVC.swift */; };
 		04BC95442486718F00BBD74D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC95432486718F00BBD74D /* loginViewController.swift */; };
 		04BC95482486816700BBD74D /* parentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC95472486816700BBD74D /* parentModel.swift */; };
+		04DC2A3424CEA2570072FB11 /* expendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC2A3324CEA2570072FB11 /* expendable.swift */; };
 		04EAC91424920F510033136E /* wordsVerbalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAC91324920F510033136E /* wordsVerbalVC.swift */; };
 		04EAC91624920F6A0033136E /* rewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAC91524920F6A0033136E /* rewardsVC.swift */; };
 		04EAC918249213240033136E /* Speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EAC917249213230033136E /* Speaker.png */; };
@@ -80,6 +85,7 @@
 		0445558924910BAE002CC8D8 /* optionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionVC.swift; sourceTree = "<group>"; };
 		0445558B24911095002CC8D8 /* RhombusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhombusView.swift; sourceTree = "<group>"; };
 		0445D2AD24A25CD600A099C8 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
+		0447D12124D19141003F6DDC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04491F30249E1F9D00BAD9C3 /* listViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listViewController.swift; sourceTree = "<group>"; };
 		044A448B24B5B85500CD6A75 /* secondOpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondOpt.png; sourceTree = "<group>"; };
 		044A448C24B5B85500CD6A75 /* firstOpt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstOpt.png; sourceTree = "<group>"; };
@@ -99,9 +105,12 @@
 		044BEB7924893C7500DD0987 /* selectedHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedHome.png; sourceTree = "<group>"; };
 		044BEB7E24893EF800DD0987 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
 		04501A5224C4029700CC9FE6 /* wordData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordData.json; sourceTree = "<group>"; };
+		0451AF2C24D2A34000E2524C /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		0451AF2E24D2A3B500E2524C /* funny.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = funny.gif; sourceTree = "<group>"; };
+		0451AF3824D2AF3900E2524C /* RecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingVC.swift; sourceTree = "<group>"; };
+		0451AF3A24D2B85700E2524C /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		0452501C2493B04E0040343F /* WordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		0452501D2493B04E0040343F /* WordDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDataLoader.swift; sourceTree = "<group>"; };
-		0452517524B4A2AA00D42EBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		045AF51D24A3164C00D257E4 /* playVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playVC.swift; sourceTree = "<group>"; };
 		045C86B5249F3BD6003870BB /* LetPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LetPlay.png; sourceTree = "<group>"; };
 		04636E81249CAB55001F92BA /* RewardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RewardData.json; sourceTree = "<group>"; };
@@ -118,6 +127,7 @@
 		04BC954124865D6200BBD74D /* TermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
 		04BC95432486718F00BBD74D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		04BC95472486816700BBD74D /* parentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentModel.swift; sourceTree = "<group>"; };
+		04DC2A3324CEA2570072FB11 /* expendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expendable.swift; sourceTree = "<group>"; };
 		04EAC91324920F510033136E /* wordsVerbalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordsVerbalVC.swift; sourceTree = "<group>"; };
 		04EAC91524920F6A0033136E /* rewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardsVC.swift; sourceTree = "<group>"; };
 		04EAC917249213230033136E /* Speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Speaker.png; sourceTree = "<group>"; };
@@ -163,6 +173,8 @@
 		044ACB9E2486096700E2818D /* UI and Images */ = {
 			isa = PBXGroup;
 			children = (
+				0451AF2E24D2A3B500E2524C /* funny.gif */,
+				0451AF3A24D2B85700E2524C /* giphy.gif */,
 				04524FF72493A82E0040343F /* wordSigns */,
 				044A448C24B5B85500CD6A75 /* firstOpt.png */,
 				044A448B24B5B85500CD6A75 /* secondOpt.png */,
@@ -190,6 +202,7 @@
 		044ACB9F248609A700E2818D /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0447D12124D19141003F6DDC /* DataManager.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 		044ACBA0248609B400E2818D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0451AF2C24D2A34000E2524C /* iOSDevCenters+GIF.swift */,
 				048A24F82498950200EC969C /* CoreDataStrategy.swift */,
 				048A24F92498950300EC969C /* PersistenceStrategy.swift */,
 				04EC14BB24937062000A1BCB /* CDManager.swift */,
@@ -245,7 +259,7 @@
 				04491F30249E1F9D00BAD9C3 /* listViewController.swift */,
 				0489718124A0C76D00CFDD9D /* statisticsVC.swift */,
 				045AF51D24A3164C00D257E4 /* playVC.swift */,
-				0452517524B4A2AA00D42EBE /* ViewController.swift */,
+				0451AF3824D2AF3900E2524C /* RecordingVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +329,7 @@
 				044ACB9D2486095A00E2818D /* Fonts */,
 				0498A7202484C70D00A3877E /* Info.plist */,
 				0498A7182484C70D00A3877E /* Real_Life_Words.xcdatamodeld */,
+				04DC2A3324CEA2570072FB11 /* expendable.swift */,
 			);
 			path = "Real Life Words";
 			sourceTree = "<group>";
@@ -410,6 +425,7 @@
 				04501A5324C4029700CC9FE6 /* wordData.json in Resources */,
 				0498A71C2484C70D00A3877E /* Assets.xcassets in Resources */,
 				044BEB7D24893C7500DD0987 /* selectedHome.png in Resources */,
+				0451AF3B24D2B85700E2524C /* giphy.gif in Resources */,
 				044ACBAA24860BED00E2818D /* Main.storyboard in Resources */,
 				04636E82249CAB55001F92BA /* RewardData.json in Resources */,
 				04F53704248A7F7D00EABAB2 /* Cancel.png in Resources */,
@@ -420,6 +436,7 @@
 				044A448F24B5B85600CD6A75 /* firstOpt.png in Resources */,
 				044BEB7F24893EF900DD0987 /* List.png in Resources */,
 				04EAC918249213240033136E /* Speaker.png in Resources */,
+				0451AF2F24D2A3B500E2524C /* funny.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048A24FB2498950300EC969C /* PersistenceStrategy.swift in Sources */,
+				0451AF2D24D2A34000E2524C /* iOSDevCenters+GIF.swift in Sources */,
 				04F536FC248A1AB800EABAB2 /* setUpGameVC.swift in Sources */,
 				0498A7142484C70D00A3877E /* RegisterViewController.swift in Sources */,
 				04FEBC0624975FA2003EE9A5 /* gameModel.swift in Sources */,
@@ -489,6 +507,8 @@
 				044BEB7524893C1500DD0987 /* TabbarViewController.swift in Sources */,
 				04BC95482486816700BBD74D /* parentModel.swift in Sources */,
 				04BC954024863A0300BBD74D /* UIKerningTextField.swift in Sources */,
+				04DC2A3424CEA2570072FB11 /* expendable.swift in Sources */,
+				0451AF3924D2AF3900E2524C /* RecordingVC.swift in Sources */,
 				044ACBB624860C4D00E2818D /* MessageCustomDate.swift in Sources */,
 				045AF51E24A3164C00D257E4 /* playVC.swift in Sources */,
 				04BC954224865D6200BBD74D /* TermsVC.swift in Sources */,
@@ -503,11 +523,11 @@
 				0452501E2493B04E0040343F /* WordData.swift in Sources */,
 				04F536FE248A212400EABAB2 /* recognizingVC.swift in Sources */,
 				048A24FA2498950300EC969C /* CoreDataStrategy.swift in Sources */,
-				0452517624B4A2AA00D42EBE /* ViewController.swift in Sources */,
 				04491F31249E1F9D00BAD9C3 /* listViewController.swift in Sources */,
 				043F3B0D248DF851001395CB /* AddWordAndSignVC.swift in Sources */,
 				043C2DFF2487BC9F00DE7514 /* createChildVC.swift in Sources */,
 				04EC14B424935AFF000A1BCB /* cuesVC.swift in Sources */,
+				0447D12224D19141003F6DDC /* DataManager.swift in Sources */,
 				04EAC91424920F510033136E /* wordsVerbalVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

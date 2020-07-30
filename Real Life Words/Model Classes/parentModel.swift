@@ -70,10 +70,12 @@ class rewardModel: NSObject {
     var reward_Type: String?
     var reward_Text: String?
     var reward_Image: Data?
+    var reward_URL: String?
     
     init (_ response: [String: Any]){
         self.reward_Type = response["reward_Type"] as? String
         self.reward_Text = response["reward_Text"] as? String
+        self.reward_URL = response["reward_URL"] as? String
         self.reward_Image = response["reward_Image"] as? Data
         self.reward_id = response["reward_id"] as? Int
 

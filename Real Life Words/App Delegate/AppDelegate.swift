@@ -9,6 +9,7 @@
 
 import UIKit
 import CoreData
+import Braintree
 
 
 @UIApplicationMain
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // self.perform(#selector(loadData), with: nil, afterDelay: 2.0)
        
+        BTAppSwitch.setReturnURLScheme("com.invito.RLW.payments")
         if !DEFAULTS.bool(forKey: Constant().PRELOAD_DATA_STORED){
             self.perform(#selector(loadData), with: nil, afterDelay: 1.0)
         }
@@ -39,7 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.scheme?.localizedCaseInsensitiveCompare("com.invito.RLW.payments") == .orderedSame {
+            return BTAppSwitch.handleOpen(url, options: options)
+        }
+        return false
+    }
 
     // MARK: - Core Data stack
 
@@ -165,7 +172,9 @@ extension AppDelegate{
                 "reward_Type":obj.reward_Type,
                 "reward_Text": obj.reward_Text,
                 "reward_Image": imagedata!,
-                "reward_id": obj.reward_id
+                "reward_id": obj.reward_id,
+                "reward_URL": obj.reward_URL
+                
             ]
             if let reward = persistenceStrategy.addReward(Entity: Constant().Table.REWARD, data: Data){
                 print(reward.reward_id!)

@@ -4,30 +4,35 @@
         "reward_id" : 1,
         "reward_Type" : "Visual",
         "reward_Text" : "",
-        "reward_Image" : "Baloon.png"
+        "reward_Image" : "giphy.gif",
+        "reward_URL" : ""
     },
     {
         "reward_id" : 2,
         "reward_Type" : "Audio",
         "reward_Text" : "You are correct !",
-        "reward_Image" : "Baloon.png"
+        "reward_Image" : "Baloon.png",
+        "reward_URL" : ""
     },
     {
         "reward_id" : 3,
         "reward_Type" : "Audio",
         "reward_Text" : "Great job !",
-        "reward_Image" : "Baloon.png"
+        "reward_Image" : "Baloon.png",
+        "reward_URL" : ""
     },
     {
         "reward_id" : 4,
         "reward_Type" : "Audio",
         "reward_Text" : "That's right !",
-        "reward_Image" : "Baloon.png"
+        "reward_Image" : "Baloon.png",
+        "reward_URL" : ""
     },
     {
         "reward_id" : 5,
         "reward_Type" : "AV",
         "reward_Text" : "Yay !",
-        "reward_Image" : "Baloon.png"
+        "reward_Image" : "Baloon.png",
+        "reward_URL" : ""
     }
 ]

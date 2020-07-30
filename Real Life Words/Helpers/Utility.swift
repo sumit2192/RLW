@@ -242,7 +242,8 @@ class Utility: NSObject {
      @returns: ( [String],[String]), where at first index array of tokenId and thebn array of instanceID
     */
     class func retreiveHistory() ->  [String] {
-        return DEFAULTS.stringArray(forKey: Constant().UD_SAVE_HISTORY) ?? [String]()
+       // return DEFAULTS.stringArray(forKey: Constant().UD_SAVE_HISTORY) ?? [String]()
+        return [""]
     }
     
     /*

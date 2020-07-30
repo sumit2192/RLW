@@ -21,10 +21,10 @@ let DEFAULTS = UserDefaults.standard
 
 /**********  URl *****************/
 
-let BASE_URL = "http://3.21.9.49/api/"
+let BASE_URL = "http://13.59.225.87/api/"
 
-let SIGNUP_URL = "signup"
-let LOGIN_URL = "signin"
+let PAYMENT_URL = "payment"
+/*let LOGIN_URL = "signin"
 let VERIFY_OTP_URL = "verifyotp"
 let SOCIAL_URL = "socialregister"
 let FORGOT_PASS_URL = "forgotpassword"
@@ -46,7 +46,7 @@ let TICKETS_DETAIL_URL = "ticketdetails"
 let TICKETS_ACCEPT_REJECT_URL = "accepcttickets"
 let BID_TICKET_LIST_URL = "bidsbyproperty"
 let BID_LIST_URL = "bidsbytickets"
-let BID_ACCEPT_REJECT_URL = "accpetbids"
+let BID_ACCEPT_REJECT_URL = "accpetbids"*/
 
 
 
@@ -104,31 +104,8 @@ class Constant: NSObject {
     static let WORD_IMAGE_REQUIRED = "Please provide a Picture depicting the word."
     //UserDefault Keys
     let UD_IS_LOGIN = "isLogin"
-    let UD_IS_SECOND_LOGIN = "isSecondLogin"
-    let UD_AUTH_TYPE = "authType"
-    let UD_XAUTH_KEY = "xAuth"
-    let UD_FILLCOUNT = "fillCount"
-    let UD_SWITCH_KISMET_CONN = "kismet"
-    let UD_HIDE_KISMET = "hideKismet"
-    let UD_TOKEN_TYPE = "tokenType"
-    let UD_ACCESS_TOKEN = "accessToken"
-    let UD_SAVE_HISTORY = "SavedStringArray"
-    let UD_SAVE_HISTORY_INSTANCE = "saveHistoryInstanceID"
-    let UD_BLUR_PROFILE = "isBlurProfile"
-    let UD_REVEALYOUR_SELF = "isReveal"
-    let UD_SHOW_ME = "showMe"
-    let UD_DB_ID = "dbId"
     let PRELOAD_DATA_STORED = "ispreloaded"
-    
-    let UD_SWITCH_GENIE_USER_NEARBY = "usernearby"
-    let UD_SWITCH_NEW_KISMET_REQUEST = "kismetrequest"
-    let UD_SWITCH_NEW_MATCH = "newmatch"
-    let UD_SWITCH_NEW_MESSAGE = "newmessage"
-    
-    let UD_SWITCH_NEW_MESSAGE_TEXT = "newmessageText"
-    let UD_SWITCH_APP_REQUIRE_RESTART = "restart"
-
-    let UD_SETTINGS_UPDATED = "settingsUpdated"
+    let UD_SUBSCRIPTION_STATUS = "isSubscribed"
     
     
     /************** User Data store **************/
@@ -161,8 +138,9 @@ class Constant: NSObject {
     static let LIST_VC = "listViewController"
     static let STATISTIC_VC = "statisticsVC"
     static let PLAY_VC = "playVC"
+    static let RECORDING_VC = "RecordingVC"
     
-    static let ViewController = "ViewController"
+    //static let ViewController = "ViewController"
     let Table = TableName()
     let Option = OptionName()
     let Verbal = VerbalHint()

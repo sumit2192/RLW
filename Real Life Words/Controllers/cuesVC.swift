@@ -103,8 +103,10 @@ class cuesVC: UIViewController {
     }
     
     @IBAction func cmdAdd(_ sender: UIButton) {
-        self.premiumVw.isHidden = false
-        self.cueCollection.isUserInteractionEnabled = false
+        if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
+            self.premiumVw.isHidden = false
+            self.cueCollection.isUserInteractionEnabled = false
+        }
     }
     
 }
@@ -162,8 +164,10 @@ extension cuesVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             btnSelect.isHidden = false
             refDict.setValue(indexPath.row + 1, forKey: "cue_id")
         }else{
-            self.premiumVw.isHidden = false
-            self.cueCollection.isUserInteractionEnabled = false
+            if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
+                self.premiumVw.isHidden = false
+                self.cueCollection.isUserInteractionEnabled = false
+            }
         }
         
     }

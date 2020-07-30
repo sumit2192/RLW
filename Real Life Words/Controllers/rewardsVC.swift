@@ -8,6 +8,9 @@
 
 import UIKit
 import AVFoundation
+import Braintree
+import BraintreeDropIn
+
 class rewardsVC: UIViewController {
 
     //MARK:- Variables and Outlets
@@ -30,6 +33,8 @@ class rewardsVC: UIViewController {
     var speechSynthesizer = AVSpeechSynthesizer()
     var speechUtterance =  AVSpeechUtterance()
     var samanthaVoice : AVSpeechSynthesisVoice?
+    var audioPlayer:AVAudioPlayer!
+    var audioUrl : String?
     
     var visualArr: [rewardModel] = []
     var audioArr: [rewardModel] = []
@@ -44,9 +49,15 @@ class rewardsVC: UIViewController {
     var asChild : Bool = false
     @IBOutlet weak var topCnstrnt: NSLayoutConstraint!
     
+    
+    var braintreeClient: BTAPIClient?
+    var paymentMethod : BTPaymentMethodNonce?
+    var dataCollector : BTDataCollector?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         if asChild{
             topCnstrnt.constant = -150
             headerVw.isHidden = asChild
@@ -75,10 +86,13 @@ class rewardsVC: UIViewController {
             refDict.setValue(ref_reward_id, forKey: "reward_id")
             btnSelect.isHidden = false
         }
-        fetchRewards()
+        
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        fetchRewards()
+    }
 
     func fetchRewards(){
         //let rewardsArr:[rewardModel] = persistenceStrategy.getRewards(Entity: Constant().Table.REWARD)
@@ -118,8 +132,24 @@ class rewardsVC: UIViewController {
     }
     
     @IBAction func cmdAdd(_ sender: UIButton) {
-        self.premiumVw.isHidden = false
-        self.baseScroll.isUserInteractionEnabled = false
+        
+        if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
+            self.premiumVw.isHidden = false
+            self.baseScroll.isUserInteractionEnabled = false
+        }else{
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.RECORDING_VC) as! RecordingVC
+            //self.navigationController?.pushViewController(vc, animated: true)
+            self.present(vc, animated: true) {
+                
+            }
+        }
+        
+    }
+    
+    @IBAction func cmdUnlock(_ sender: UIButton) {
+        premiumVw.isHidden = true
+        showDropIn(clientTokenOrTokenizationKey: "sandbox_bnbny459_3j7842rnbqm73ygn")
+        
     }
     
     @IBAction func cmdSelect(_ sender: UIButton) {
@@ -136,6 +166,49 @@ class rewardsVC: UIViewController {
         vc.gameArr = gameArr
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func showDropIn(clientTokenOrTokenizationKey: String) {
+        let request =  BTDropInRequest()
+        let dropIn = BTDropInController(authorization: clientTokenOrTokenizationKey, request: request)
+        { (controller, result, error) in
+            if (error != nil) {
+                print("ERROR")
+                print(error!.localizedDescription)
+            } else if (result?.isCancelled == true) {
+                print("CANCELLED")
+            } else if let result = result {
+
+                self.paymentMethod = result.paymentMethod
+                self.callPaymentWS(nonce: self.paymentMethod!.nonce)
+            }
+            controller.dismiss(animated: true, completion: nil)
+        }
+        
+        self.present(dropIn!, animated: true, completion: nil)
+    }
+    
+    func callPaymentWS(nonce: String){
+        let param : [String: Any] = ["device_data": DEFAULTS.string(forKey: Constant().UD_SUPER_USER_EMAIL)!,
+                                     "nonce_id" : nonce]
+        DataManager.alamofirePostRequestWithDictionary(url: BASE_URL + PAYMENT_URL, viewcontroller: self, parameters: param as [String: Any] as [String : AnyObject]) { (responseObject, error,responseDict)  in
+        
+            print(responseObject ?? "")
+            
+            let arrayValueInfo = responseObject?.dictionaryValue
+            
+                if let responseCode = arrayValueInfo?["status"]?.boolValue {
+                    if responseCode == true {
+                        DEFAULTS.set(true, forKey: Constant().UD_SUBSCRIPTION_STATUS)
+                        Utility.showAlertMessage(title: Constant().TITLE, message: "Paymet Successful", view: self)
+                       // completion(responseCode)
+                        return
+                    }
+            }
+            Utility.showAlertMessage(title: "Oops!", message: Constant().ERROR_MSG, view: self)
+            //completion(false)
+        }
+    }
+
     
 }
 
@@ -161,7 +234,12 @@ extension rewardsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
         if collectionView.tag == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "visualCell", for: indexPath) as! visualCell
             let item = visualArr[indexPath.row]
-            cell.imgVisual.image = UIImage(data: item.reward_Image!)
+           // cell.imgVisual.image = UIImage(data: item.reward_Image!)
+            //let jeremyGif = UIImage.gifImageWithName("funny")
+            cell.imgVisual.image = UIImage.gifImageWithName("giphy")
+//            let imageView = UIImageView(image: jeremyGif)
+//            imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
+//            view.addSubview(imageView)
             if item.reward_id == ref_reward_id{
                 cell.blurVw.isHidden = false
             }else{
@@ -185,7 +263,8 @@ extension rewardsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AVCell", for: indexPath) as! AVCell
             let item = avArr[indexPath.row]
-            cell.imgVisual.image = UIImage(data: item.reward_Image!)
+            //cell.imgVisual.image = UIImage(data: item.reward_Image!)
+            cell.imgVisual.image = UIImage.gifImageWithName("giphy")
             cell.lblAudio.text = item.reward_Text
             cell.tag = item.reward_id!
             return cell
@@ -218,20 +297,60 @@ extension rewardsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
                 audioCollection.reloadData()
                 visualAudioCollection.reloadData()
             }else{
-                self.premiumVw.isHidden = false
-                self.baseScroll.isUserInteractionEnabled = false
+                if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
+                    self.premiumVw.isHidden = false
+                    self.baseScroll.isUserInteractionEnabled = false
+                }
+                
             }
         }
     }
     
     func playSoundAt(index: Int) {
+        if index < 3{
+            let reward = audioArr[index]
+            let SpeechString = reward.reward_Text!
+            speechUtterance = AVSpeechUtterance(string: SpeechString)
+            speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate - 0.1
+            speechUtterance.voice = samanthaVoice//Daniel Lekha Rishi
+            //        speechUtterance.pitchMultiplier = 0.5
+            speechSynthesizer.speak(speechUtterance)
+        }else{
+            preparePlayer(index: index)
+            audioPlayer.play()
+        }
+
+    }
+    
+    func preparePlayer(index: Int) {
+        var error: NSError?
         let reward = audioArr[index]
-        let SpeechString = reward.reward_Text!
-        speechUtterance = AVSpeechUtterance(string: SpeechString)
-        speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate - 0.1
-        speechUtterance.voice = samanthaVoice//Daniel Lekha Rishi
-        //        speechUtterance.pitchMultiplier = 0.5
-        speechSynthesizer.speak(speechUtterance)
+        audioUrl = reward.reward_URL!
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: getFileURL() as URL)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+           // audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 10.0
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    func getFileURL() -> URL {
+        //let str = String(format: "recording_5.m4a", Last_Reward_id+1)
+        let url = URL(string: audioUrl!)
+        let path = url
+        return path!
     }
     
 }

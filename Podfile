@@ -15,7 +15,10 @@ target 'Real Life Words' do
   pod 'MRCountryPicker', '~> 0.0.8'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-  
+  pod 'Braintree'
+  pod 'BraintreeDropIn'
+  pod 'Braintree/PayPal'
+  pod 'Braintree/DataCollector'
    #for object finding from model
     pod 'ObjectMapper'
   

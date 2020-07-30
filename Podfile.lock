@@ -1,5 +1,46 @@
 PODS:
   - Alamofire (5.0.2)
+  - Braintree (4.34.0):
+    - Braintree/Card (= 4.34.0)
+    - Braintree/Core (= 4.34.0)
+    - Braintree/PayPal (= 4.34.0)
+    - Braintree/UI (= 4.34.0)
+  - Braintree/Card (4.34.0):
+    - Braintree/Core
+  - Braintree/Core (4.34.0)
+  - Braintree/DataCollector (4.34.0):
+    - Braintree/Core
+  - Braintree/PaymentFlow (4.34.0):
+    - Braintree/Card
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPal (4.34.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.34.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.34.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.34.0)
+  - Braintree/UI (4.34.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/UnionPay (4.34.0):
+    - Braintree/Card
+    - Braintree/Core
+  - BraintreeDropIn (8.1.1):
+    - BraintreeDropIn/DropIn (= 8.1.1)
+  - BraintreeDropIn/DropIn (8.1.1):
+    - Braintree/Card (~> 4.32)
+    - Braintree/Core (~> 4.32)
+    - Braintree/PaymentFlow (~> 4.32)
+    - Braintree/PayPal (~> 4.32)
+    - Braintree/UnionPay (~> 4.32)
+    - BraintreeDropIn/UIKit
+  - BraintreeDropIn/UIKit (8.1.1)
   - CropViewController (2.5.2)
   - FAPanels (2.0.1)
   - FBSDKCoreKit (6.0.0):
@@ -26,6 +67,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Braintree
+  - Braintree/DataCollector
+  - Braintree/PayPal
+  - BraintreeDropIn
   - CropViewController
   - FAPanels
   - FBSDKCoreKit
@@ -41,6 +86,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Braintree
+    - BraintreeDropIn
     - CropViewController
     - FAPanels
     - FBSDKCoreKit
@@ -56,6 +103,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Braintree: 48154e70306eb3e6c81eaa87bbc5c5988c0d2784
+  BraintreeDropIn: 2cf07a9041df45ff671586042dbaf7b5d2767347
   CropViewController: 1aac40093c5739e60d992b04724a55d12a689a4c
   FAPanels: 050291ef601a1dc00fad888f83e74284cb86dd52
   FBSDKCoreKit: fe738b172590e622c86735b45e20d196848b54df
@@ -69,6 +118,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   VisualEffectView: bde340c8268765c2d71f7f115930733ba7e4a926
 
-PODFILE CHECKSUM: 8ffcd98528607b415959718322cc0cc88298635a
+PODFILE CHECKSUM: ca25d012368f815e975237bac5b93f139c3d6246
 
 COCOAPODS: 1.8.4

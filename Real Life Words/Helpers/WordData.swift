@@ -25,6 +25,7 @@ struct RewardData: Codable {
     var reward_Type: String
     var reward_Text: String
     var reward_Image: String
+    var reward_URL: String
 
 }
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Braintree
+import BraintreeDropIn
 
 class listViewController: UIViewController {
 
@@ -23,6 +25,10 @@ class listViewController: UIViewController {
     @IBOutlet weak var lblInfo: UILabel!
     @IBOutlet weak var btnUnlock: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
+    
+    var braintreeClient: BTAPIClient?
+    var paymentMethod : BTPaymentMethodNonce?
+    var dataCollector : BTDataCollector?
     
     var wordTapped: Bool = false
     var wordsVC : recognizingVC{
@@ -88,9 +94,10 @@ class listViewController: UIViewController {
     //MARK:- Button Actions
 
     @IBAction func cmdAdd(_ sender: UIButton) {
+        if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
         self.view.bringSubviewToFront(self.premiumVw)
         self.premiumVw.isHidden = false
-        
+        }
     }
     
     @IBAction func cmdCancel(_ sender: UIButton){
@@ -99,6 +106,7 @@ class listViewController: UIViewController {
     
     @IBAction func cmdUnlock(_ sender: UIButton) {
          self.premiumVw.isHidden = true
+        showDropIn(clientTokenOrTokenizationKey: "sandbox_bnbny459_3j7842rnbqm73ygn")
     }
     
     @IBAction func cmdAnimate(_ sender: UIButton) {
@@ -121,5 +129,46 @@ class listViewController: UIViewController {
         }
     }
 
+    func showDropIn(clientTokenOrTokenizationKey: String) {
+        let request =  BTDropInRequest()
+        let dropIn = BTDropInController(authorization: clientTokenOrTokenizationKey, request: request)
+        { (controller, result, error) in
+            if (error != nil) {
+                print("ERROR")
+                print(error!.localizedDescription)
+            } else if (result?.isCancelled == true) {
+                print("CANCELLED")
+            } else if let result = result {
+
+                self.paymentMethod = result.paymentMethod
+                self.callPaymentWS(nonce: self.paymentMethod!.nonce)
+            }
+            controller.dismiss(animated: true, completion: nil)
+        }
+        
+        self.present(dropIn!, animated: true, completion: nil)
+    }
+    
+    func callPaymentWS(nonce: String){
+        let param : [String: Any] = ["device_data": DEFAULTS.string(forKey: Constant().UD_SUPER_USER_EMAIL)!,
+                                     "nonce_id" : nonce]
+        DataManager.alamofirePostRequestWithDictionary(url: BASE_URL + PAYMENT_URL, viewcontroller: self, parameters: param as [String: Any] as [String : AnyObject]) { (responseObject, error,responseDict)  in
+        
+            print(responseObject ?? "")
+            
+            let arrayValueInfo = responseObject?.dictionaryValue
+            
+                if let responseCode = arrayValueInfo?["status"]?.boolValue {
+                    if responseCode == true {
+                        DEFAULTS.set(true, forKey: Constant().UD_SUBSCRIPTION_STATUS)
+                        Utility.showAlertMessage(title: Constant().TITLE, message: "Paymet Successful", view: self)
+                       // completion(responseCode)
+                        return
+                    }
+            }
+            Utility.showAlertMessage(title: "Oops!", message: Constant().ERROR_MSG, view: self)
+            //completion(false)
+        }
+    }
     
 }

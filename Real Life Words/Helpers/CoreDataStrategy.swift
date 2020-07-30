@@ -178,6 +178,7 @@ class CoreDataStrategy: PersistenceStrategy{
         let itemEntity = NSEntityDescription.insertNewObject(forEntityName: Entity, into: context) as! Reward_List
         itemEntity.reward_Type = data["reward_Type"] as? String
         itemEntity.reward_Text = data["reward_Text"] as? String
+        itemEntity.reward_URL = data["reward_URL"] as? String 
         itemEntity.reward_Image = data["reward_Image"] as? Data
         itemEntity.reward_id = Int16(data["reward_id"] as! Int)
         do {
@@ -205,7 +206,8 @@ class CoreDataStrategy: PersistenceStrategy{
                         "reward_Type": data.value(forKey: "reward_Type")as! String,
                         "reward_Text": data.value(forKey: "reward_Text")as! String,
                         "reward_Image": data.value(forKey: "reward_Image")as! Data,
-                        "reward_id": data.value(forKey: "reward_id")as! Int
+                        "reward_id": data.value(forKey: "reward_id")as! Int,
+                        "reward_URL": data.value(forKey: "reward_URL")as! String
                     ]
                     arrayofReward.append(rewardModel(Data))
                     
