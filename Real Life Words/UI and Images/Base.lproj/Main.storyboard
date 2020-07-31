@@ -147,63 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4282" y="10"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bbZ-iA-3an">
-            <objects>
-                <viewController id="j3v-kJ-0fS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="t7d-qV-m0R">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j5F-93-tAs">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8cf-Oz-2c4">
-                                    <size key="itemSize" width="305" height="1346"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uEA-wS-NRK">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="1346"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gKQ-jr-yE8">
-                                            <rect key="frame" x="0.0" y="0.0" width="305" height="1346"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wu8-h3-QZR">
-                                                    <rect key="frame" x="32" y="39" width="240" height="1201"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </view>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" name="AppLightBlue"/>
-                                        <size key="customSize" width="305" height="1346"/>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="j3v-kJ-0fS" id="KgK-Bq-Lnk"/>
-                                    <outlet property="delegate" destination="j3v-kJ-0fS" id="UxM-J0-KJc"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="j5F-93-tAs" firstAttribute="top" secondItem="N9q-7K-Y5u" secondAttribute="top" id="5Ry-Hf-zsh"/>
-                            <constraint firstItem="N9q-7K-Y5u" firstAttribute="trailing" secondItem="j5F-93-tAs" secondAttribute="trailing" id="QhP-DM-lGs"/>
-                            <constraint firstItem="N9q-7K-Y5u" firstAttribute="bottom" secondItem="j5F-93-tAs" secondAttribute="bottom" id="d3y-Ck-lno"/>
-                            <constraint firstItem="j5F-93-tAs" firstAttribute="leading" secondItem="N9q-7K-Y5u" secondAttribute="leading" id="mGy-XF-FLW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="N9q-7K-Y5u"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LsP-iF-VrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4420.8984375" y="1065.5929721815519"/>
+            <point key="canvasLocation" x="5484" y="355"/>
         </scene>
         <!--PolicyVC-->
         <scene sceneID="SqC-tF-rw6">
@@ -1010,7 +954,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0P-zV-qsY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4900.78125" y="-636.01756954612006"/>
+            <point key="canvasLocation" x="5484" y="-1550"/>
         </scene>
         <!--TermsVC-->
         <scene sceneID="B2n-ob-Ykf">
@@ -1517,7 +1461,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUU-cB-ELn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4907.8125" y="9.6632503660322104"/>
+            <point key="canvasLocation" x="5484" y="-916"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5Kz-yC-FC6">
@@ -1624,7 +1568,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dda-Nl-S8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5530" y="10"/>
+            <point key="canvasLocation" x="5484" y="-278"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="2V9-U2-D64">
@@ -1864,7 +1808,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                     <viewLayoutGuide key="safeArea" id="IPm-Zi-3Rf"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="7412" y="355"/>
+            <point key="canvasLocation" x="7360" y="355"/>
         </scene>
         <!--User List View Controller-->
         <scene sceneID="j7y-CP-8Oa">
@@ -2231,7 +2175,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                     <viewLayoutGuide key="safeArea" id="c6H-db-TbL"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="7411.5234374999991" y="-280.2342606149341"/>
+            <point key="canvasLocation" x="7360" y="-1550"/>
         </scene>
         <!--Create ChildVC-->
         <scene sceneID="VCZ-7I-kht">
@@ -2543,7 +2487,7 @@ Your privacy matters to us. You can learn how to handle your information when yo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2z-gz-HaT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8031.4453124999991" y="-280.2342606149341"/>
+            <point key="canvasLocation" x="7980" y="-1550"/>
         </scene>
         <!--Set Up GameVC-->
         <scene sceneID="J2o-vp-Zdc">
@@ -2998,7 +2942,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7L-zl-XG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8651.3671875" y="-280.2342606149341"/>
+            <point key="canvasLocation" x="8597" y="-1550"/>
         </scene>
         <!--RecognizingVC-->
         <scene sceneID="KUV-O7-7OW">
@@ -3295,7 +3239,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRO-Pc-LQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9271.2890625" y="-279.35578330893117"/>
+            <point key="canvasLocation" x="6737" y="-916"/>
         </scene>
         <!--OptionVC-->
         <scene sceneID="Yz4-43-5Uj">
@@ -3778,7 +3722,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                     </userDefinedRuntimeAttributes>
                 </view>
             </objects>
-            <point key="canvasLocation" x="9898.828125" y="-279.35578330893117"/>
+            <point key="canvasLocation" x="7360" y="-916"/>
         </scene>
         <!--Words VerbalVC-->
         <scene sceneID="pOc-Vn-VLe">
@@ -4038,7 +3982,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                     <viewLayoutGuide key="safeArea" id="WoK-EY-HXy"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="10582.6171875" y="-279.35578330893117"/>
+            <point key="canvasLocation" x="7980" y="-916"/>
         </scene>
         <!--RewardsVC-->
         <scene sceneID="dsj-CY-pXv">
@@ -4692,7 +4636,7 @@ Now setup the following games according to the user’s age, understanding &amp;
                     <viewLayoutGuide key="safeArea" id="Ugp-IP-FfD"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="11207.8125" y="-279.35578330893117"/>
+            <point key="canvasLocation" x="8597" y="-916"/>
         </scene>
         <!--CuesVC-->
         <scene sceneID="YPP-j7-fdW">
@@ -5111,7 +5055,7 @@ correct choice</string>
                     <viewLayoutGuide key="safeArea" id="oVB-bG-x7x"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="11861.71875" y="-279.35578330893117"/>
+            <point key="canvasLocation" x="6737" y="-278"/>
         </scene>
         <!--Add Word And SignVC-->
         <scene sceneID="rXa-yE-JFy">
@@ -5645,7 +5589,7 @@ correct choice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDE-VT-ghv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9270.703125" y="-927.23279648609071"/>
+            <point key="canvasLocation" x="8597" y="355"/>
         </scene>
         <!--Child Home View Controller-->
         <scene sceneID="1uc-5s-Lfb">
@@ -6098,7 +6042,7 @@ correct choice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pD-C6-nuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6788" y="1027"/>
+            <point key="canvasLocation" x="7360" y="-278"/>
         </scene>
         <!--PlayVC-->
         <scene sceneID="x8m-5K-kDP">
@@ -6335,7 +6279,7 @@ correct choice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eP-pe-9SY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7422.6562499999991" y="1026.939970717423"/>
+            <point key="canvasLocation" x="8597" y="-278"/>
         </scene>
         <!--StatisticsVC-->
         <scene sceneID="T9A-qo-mH5">
@@ -6605,7 +6549,7 @@ correct choice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlN-wA-03t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6788" y="1659"/>
+            <point key="canvasLocation" x="7980" y="-278"/>
         </scene>
         <!--Tabbar View Controller-->
         <scene sceneID="nZq-gh-lAS">
@@ -6624,7 +6568,7 @@ correct choice</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THN-v0-XCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6169.3359375" y="9.6632503660322104"/>
+            <point key="canvasLocation" x="6115" y="17"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KkC-fQ-cXq">
@@ -6642,7 +6586,7 @@ correct choice</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcQ-GW-9RN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6788.0859375" y="-280.2342606149341"/>
+            <point key="canvasLocation" x="6737" y="-1550"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2KL-is-A76">
@@ -6660,7 +6604,7 @@ correct choice</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sl-oX-kKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6788.0859375" y="354.90483162518296"/>
+            <point key="canvasLocation" x="6737" y="355"/>
         </scene>
         <!--RecordingVC-->
         <scene sceneID="yyP-4r-TEJ">
@@ -6786,7 +6730,7 @@ correct choice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0q-64-xeW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8068" y="355"/>
+            <point key="canvasLocation" x="7980" y="355"/>
         </scene>
     </scenes>
     <resources>
