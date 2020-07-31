@@ -33,12 +33,19 @@ class RecordingVC: UIViewController {
     // MARK:-
     // MARK:- Variables
     //------------------------------------------------------------------------------
-
+    var speechSynthesizer = AVSpeechSynthesizer()
+    var speechUtterance =  AVSpeechUtterance()
     var samanthaVoice : AVSpeechSynthesisVoice?
+    let speechRecognizer        = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
+    var recognitionRequest      : SFSpeechAudioBufferRecognitionRequest?
+    var recognitionTask         : SFSpeechRecognitionTask?
+    let audioEngine             = AVAudioEngine()
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer:AVAudioPlayer!
+    
+    
 
     var hours: Int = 0
     var minutes: Int = 0
@@ -48,6 +55,7 @@ class RecordingVC: UIViewController {
     var timer : Timer!
     var Last_Reward_id : Int = 0
     var refUrl: String?
+    var refAudioText: String?
     //------------------------------------------------------------------------------
     // MARK:-
     // MARK:- View Life Cycle Methods
@@ -96,24 +104,29 @@ class RecordingVC: UIViewController {
     }
     
     @IBAction func cmdAdd(_ sender: UIButton) {
-        
-        let image = UIImage(named: "Baloon.png")
-        let imagedata : Data? = image?.pngData()
-        
-        let Data: [String: Any] = [
-            "reward_id": self.Last_Reward_id + 1,
-            "reward_Type": "Audio",
-            "reward_Text": "",
-            "reward_Image": imagedata!,
-            "reward_URL": refUrl!
-        ]
-        print(Data)
-        if let reward = persistenceStrategy.addReward(Entity: Constant().Table.REWARD, data: Data){
-            print(reward.reward_id!)
-            self.dismiss(animated: true) {
-                
+        if let str = refAudioText{
+            let image = UIImage(named: "Baloon.png")
+            let imagedata : Data? = image?.pngData()
+            let Data: [String: Any] = [
+                "reward_id": self.Last_Reward_id + 1,
+                "reward_Type": "Audio",
+                "reward_Text": str,
+                "reward_Image": imagedata!,
+                "reward_URL": refUrl!
+            ]
+            print(Data)
+            if (persistenceStrategy.addReward(Entity: Constant().Table.REWARD, data: Data)) != nil{
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Fetch_Rewards"), object: nil )
+                self.dismiss(animated: true) {
+                    
+                }
+            }
+        }else{
+            Utility.showKSAlertMessageWithOkAction(title: Constant().TITLE, message: "Unable to detect the speech. Please try again", view: self) {
+                self.dismiss(animated: true, completion: nil)
             }
         }
+
 
     }
     
@@ -192,10 +205,75 @@ class RecordingVC: UIViewController {
         self.lblCount.text = "00:00"
     }
     
-    func startRecording() {
+        func startDetecting() {
+            
+            if recognitionTask != nil {
+                recognitionTask?.cancel()
+                recognitionTask = nil
+            }
 
+            // Create instance of audio session to record voice
+            let audioSession = AVAudioSession.sharedInstance()
+            do {
+                try audioSession.setCategory(AVAudioSession.Category.record, mode: AVAudioSession.Mode.measurement, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+                try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+            } catch {
+                print("audioSession properties weren't set because of an error.")
+            }
+
+            self.recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+
+            let inputNode = audioEngine.inputNode
+
+            guard let recognitionRequest = recognitionRequest else {
+                fatalError("Unable to create an SFSpeechAudioBufferRecognitionRequest object")
+            }
+
+            recognitionRequest.shouldReportPartialResults = true
+
+            self.recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
+
+                var isFinal = false
+                var speechStr : String?
+                if result != nil {
+
+                   // self.lblText.text = result?.bestTranscription.formattedString
+                    self.audioEngine.stop()
+                    self.recognitionRequest?.endAudio()
+                    speechStr = result?.bestTranscription.formattedString
+                    self.refAudioText = speechStr
+                    isFinal = (result?.isFinal)!
+                }
+
+                if error != nil || isFinal {
+
+                    self.audioEngine.stop()
+                    inputNode.removeTap(onBus: 0)
+
+                    self.recognitionRequest = nil
+                    self.recognitionTask = nil
+                }
+            })
+            
+            
+            let recordingFormat = inputNode.outputFormat(forBus: 0)
+            inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, when) in
+                self.recognitionRequest?.append(buffer)
+            }
+
+            self.audioEngine.prepare()
+
+            do {
+                try self.audioEngine.start()
+            } catch {
+                print("audioEngine couldn't start because of an error.")
+            }
+
+           // self.lblText.text = "Say something, I'm listening!"
+        }
+    func startRecording() {
+        startDetecting()
         let audioFilename = getFileURL()
-        refUrl = audioFilename.absoluteString
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
@@ -250,6 +328,7 @@ class RecordingVC: UIViewController {
     }
     func getFileURL() -> URL {
         let str = String(format: "recording_%d.m4a", Last_Reward_id+1)
+        refUrl = str
         let path = getDocumentsDirectory().appendingPathComponent(str)
        // guard let data = try? Data(contentsOf:path) else { return }
         return path as URL

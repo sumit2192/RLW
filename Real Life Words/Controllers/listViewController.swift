@@ -97,6 +97,17 @@ class listViewController: UIViewController {
         if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
         self.view.bringSubviewToFront(self.premiumVw)
         self.premiumVw.isHidden = false
+        }else{
+            if sender.tag == 0{
+                let totalWords = persistenceStrategy.getWord(Entity: Constant().Table.WORDS, predicate: nil)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.ADD_WORD_SIGN_VC) as! AddWordAndSignVC
+                vc.Last_Generated_wordId = totalWords.count
+                self.navigationController?.pushViewController(vc, animated: true)
+                //self.present(vc, animated: true, completion: nil)
+            }else{
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: Constant.RECORDING_VC) as! RecordingVC
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
     
@@ -121,7 +132,7 @@ class listViewController: UIViewController {
             self.rewardVC.view.isHidden = false
             self.wordsVC.view.isHidden = true
         }
-        
+        self.btnAdd.tag = sender.tag
         UIView.animate(withDuration: 0.3, animations: {
             self.animatingVw.frame = CGRect(x: sender.frame.origin.x, y: self.animatingVw.frame.origin.y, width: sender.frame.width, height: self.animatingVw.frame.height)
         }) { (completed) in

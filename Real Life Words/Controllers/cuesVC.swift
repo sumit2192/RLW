@@ -140,11 +140,12 @@ extension cuesVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             cell.itemImg.image = UIImage(named: "Cue1.png")
             cell.itemName.text = "Highlighting the correct choice"
         }else if indexPath.row == 1 {
-            cell.imgPremium.isHidden = false
+
+            cell.imgPremium.isHidden = DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS)
             cell.itemImg.image = UIImage(named: "Cue2.png")
             cell.itemName.text = "Arrow pointing the correct choice"
         }else{
-            cell.imgPremium.isHidden = false
+            cell.imgPremium.isHidden = DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS)
             cell.itemImg.image = UIImage(named: "Cue3.png")
             cell.itemName.text = "Fading out the incorrect choice"
         }
@@ -167,6 +168,12 @@ extension cuesVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
                 self.premiumVw.isHidden = false
                 self.cueCollection.isUserInteractionEnabled = false
+            }else{
+                arrSelectedIndex.removeAll()
+                arrSelectedIndex.append(indexPath)
+                collectionView.reloadData()
+                btnSelect.isHidden = false
+                refDict.setValue(indexPath.row + 1, forKey: "cue_id")
             }
         }
         

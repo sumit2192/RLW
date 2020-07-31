@@ -93,12 +93,12 @@ class userListViewController: UIViewController, BTThreeDSecureRequestDelegate {
         
         cdManager.fetchDataFrom(table: Constant().Table.CHILDREN, predicateFormat: "") { (status) in
             if status == 1{
-                if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS){
-                    self.premiumVw.isHidden = false
-                }else{
-                    self.premiumVw.isHidden = false
-                }
-                
+//                if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS){
+//                    self.premiumVw.isHidden = false
+//                }else{
+//                    self.premiumVw.isHidden = true
+//                }
+                self.premiumVw.isHidden = DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS)
             }
         }
 

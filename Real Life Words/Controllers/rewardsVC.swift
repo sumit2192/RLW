@@ -57,7 +57,7 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        btnAdd.isHidden = true
         if asChild{
             topCnstrnt.constant = -150
             headerVw.isHidden = asChild
@@ -87,13 +87,23 @@ class rewardsVC: UIViewController {
             btnSelect.isHidden = false
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateRewards), name: NSNotification.Name(rawValue: "Fetch_Rewards"), object: nil)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         fetchRewards()
     }
-
+    
+    @objc func updateRewards() {
+        visualArr.removeAll()
+        audioArr.removeAll()
+        avArr.removeAll()
+        fetchRewards()
+        audioCollection.reloadData()
+        visualCollection.reloadData()
+        visualAudioCollection.reloadData()
+    }
     func fetchRewards(){
         //let rewardsArr:[rewardModel] = persistenceStrategy.getRewards(Entity: Constant().Table.REWARD)
         let rewardsArr:[rewardModel] = persistenceStrategy.getRewards(Entity:  Constant().Table.REWARD, predicate: nil)
@@ -266,6 +276,11 @@ extension rewardsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
             //cell.imgVisual.image = UIImage(data: item.reward_Image!)
             cell.imgVisual.image = UIImage.gifImageWithName("giphy")
             cell.lblAudio.text = item.reward_Text
+            if item.reward_id == ref_reward_id{
+                cell.blurVw.isHidden = false
+            }else{
+                cell.blurVw.isHidden = true
+            }
             cell.tag = item.reward_id!
             return cell
         }
@@ -300,6 +315,14 @@ extension rewardsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
                 if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS) {
                     self.premiumVw.isHidden = false
                     self.baseScroll.isUserInteractionEnabled = false
+                }else{
+                    btnSelect.isHidden = false
+                    let item = avArr[indexPath.row]
+                    refDict.setValue(item.reward_id, forKey: "reward_id")
+                    ref_reward_id = item.reward_id!
+                    visualCollection.reloadData()
+                    audioCollection.reloadData()
+                    visualAudioCollection.reloadData()
                 }
                 
             }
@@ -342,13 +365,14 @@ extension rewardsVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSou
         }
     }
     
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    func getDocumentsDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         return paths[0]
     }
     func getFileURL() -> URL {
         //let str = String(format: "recording_5.m4a", Last_Reward_id+1)
-        let url = URL(string: audioUrl!)
+        let str = URL(fileURLWithPath: getDocumentsDirectory()).appendingPathComponent(audioUrl!).absoluteString
+        let url = URL(string: str)
         let path = url
         return path!
     }

@@ -22,13 +22,14 @@ class playVC: UIViewController {
     
     @IBOutlet weak var lblWord: UILabel!
     @IBOutlet weak var imgSign: UIImageView!
-    
+    @IBOutlet weak var gifVW: UIImageView!
     
     
     @IBOutlet weak var btnPrev: UIButton!
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var answerCollection: UICollectionView!
     @IBOutlet weak var lblSpeech: UILabel!
+    
     
     private let spacing:CGFloat = 20.0
     
@@ -40,6 +41,7 @@ class playVC: UIViewController {
     var recognitionRequest      : SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask         : SFSpeechRecognitionTask?
     let audioEngine             = AVAudioEngine()
+    var audioPlayer:AVAudioPlayer!
     
     var gameId : Int?
     var user : childModel!
@@ -477,13 +479,7 @@ class playVC: UIViewController {
                 self.audioEngine.stop()
                 self.recognitionRequest?.endAudio()
                 speechStr = result?.bestTranscription.formattedString
-               
-//                if str == refString && self.shouldPlayReward{
-//                    self.playSoundWith(SpeechString: self.refReward.reward_Text!)
-//                }else{
-//                    self.playSoundWith(SpeechString: "Wrong Answer")
-//                }
-
+ 
                 isFinal = (result?.isFinal)!
             }
 
@@ -497,14 +493,32 @@ class playVC: UIViewController {
 
                 if self.shouldPlayReward{
                   if speechStr == refString {
-                    self.playSoundWith(SpeechString: self.refReward.reward_Text!)
+                    if self.refReward.reward_Type == Constant().RewardType.AUDIO{
+                        if self.refReward.reward_URL == ""{
+                            self.playSoundWith(SpeechString: self.refReward.reward_Text!)
+                            self.perform(#selector(self.displayNextQuestion), with: nil, afterDelay: 1.0)
+                        }else{
+                            self.preparePlayer(audioUrl: self.refReward.reward_URL!)
+                            self.audioPlayer.play()
+                        }
+                        
+                    }else if self.refReward.reward_Type == Constant().RewardType.VISUAL{
+                        self.gifVW.isHidden = false
+                        self.gifVW.image = UIImage.gifImageWithName("giphy")
+                        self.perform(#selector(self.displayNextQuestion), with: nil, afterDelay: 1.0)
+                    }else{
+                        self.gifVW.isHidden = false
+                        self.gifVW.image = UIImage.gifImageWithName("giphy")
+                        self.playSoundWith(SpeechString: self.refReward.reward_Text!)
+                        self.perform(#selector(self.displayNextQuestion), with: nil, afterDelay: 1.0)
+                    }
                     self.rightCount += 1
                   }else{
                       self.playSoundWith(SpeechString: "Wrong Answer")
                   }
                   self.lblSpeech.text = speechStr
                   self.tagArr.append(self.answerCollection.tag)
-                  self.perform(#selector(self.displayNextQuestion), with: nil, afterDelay: 1.0)
+                  
               }
               self.shouldPlayReward = false
             }
@@ -526,6 +540,7 @@ class playVC: UIViewController {
        // self.lblText.text = "Say something, I'm listening!"
     }
     @objc func displayNextQuestion(){
+        self.gifVW.isHidden = true
         if currentQues < totalQues{
             let transition = CATransition()
             transition.type = CATransitionType.push
@@ -591,6 +606,7 @@ class playVC: UIViewController {
     }
     
     @IBAction func cmdPrevious(_ sender: UIButton) {
+        self.gifVW.isHidden = true
         if currentQues > 1{
             let transition = CATransition()
             transition.type = CATransitionType.push
@@ -659,6 +675,7 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                 cell.imgSign.isHidden = true
                 cell.lblWord.isHidden = false
             }
+            
         }else if self.gameId == 2{
             cell.frame = CGRect(x: (collectionView.frame.width/2) - (cell.frame.width/2), y: cell.frame.origin.y, width: cell.frame.width , height: cell.frame.height)
             cell.imgSign.image = UIImage(data: refWord.sign!)
@@ -717,7 +734,22 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             }else{
                 if word.word_id == refWord.word_id{
                     if refReward.reward_Type == Constant().RewardType.AUDIO{
+                        if refReward.reward_URL == ""{
+                            self.playSoundWith(SpeechString: refReward.reward_Text!)
+                            self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
+                        }else{
+                            self.preparePlayer(audioUrl: refReward.reward_URL!)
+                            self.audioPlayer.play()
+                        }
+                        
+                    }else if refReward.reward_Type == Constant().RewardType.VISUAL{
+                        self.gifVW.isHidden = false
+                        self.gifVW.image = UIImage.gifImageWithName("giphy")
+                    }else{
+                        self.gifVW.isHidden = false
+                        self.gifVW.image = UIImage.gifImageWithName("giphy")
                         self.playSoundWith(SpeechString: refReward.reward_Text!)
+                        self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
                     }
                     self.rightCount += 1
                 }else{
@@ -729,12 +761,12 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                     cell.layer.borderWidth = 5.0
                     cell.layer.borderColor = #colorLiteral(red: 0.9176470588, green: 0.8823529412, blue: 0.04705882353, alpha: 1)
                     self.playSoundWith(SpeechString: "Wrong Answer")
-                    
+                    self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
                 }
             }
             
             self.tagArr.append(collectionView.tag)
-            self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
+            
         }else if self.gameId == 3{
             
             if tagArr.contains(collectionView.tag){
@@ -747,10 +779,26 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                         }
                     }
                     if indexarr.count == 0{
-                        self.playSoundWith(SpeechString: refReward.reward_Text!)
+                        if refReward.reward_Type == Constant().RewardType.AUDIO{
+                            if refReward.reward_URL == ""{
+                                self.playSoundWith(SpeechString: refReward.reward_Text!)
+                                self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
+                            }else{
+                                self.preparePlayer(audioUrl: refReward.reward_URL!)
+                                self.audioPlayer.play()
+                            }
+                        }else if refReward.reward_Type == Constant().RewardType.VISUAL{
+                            self.gifVW.isHidden = false
+                            self.gifVW.image = UIImage.gifImageWithName("giphy")
+                        }else{
+                            self.gifVW.isHidden = false
+                            self.gifVW.image = UIImage.gifImageWithName("giphy")
+                            self.playSoundWith(SpeechString: refReward.reward_Text!)
+                            self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
+                        }
+                        //self.playSoundWith(SpeechString: refReward.reward_Text!)
                         self.rightCount += 1
                         self.tagArr.append(collectionView.tag)
-                        self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
                     }
                 }else{
                     for item in indexarr{
@@ -777,10 +825,26 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
                         }
                     }
                     if indexarr.count == 0{
-                        self.playSoundWith(SpeechString: refReward.reward_Text!)
+                        if refReward.reward_Type == Constant().RewardType.AUDIO{
+                            if refReward.reward_URL == ""{
+                                self.playSoundWith(SpeechString: refReward.reward_Text!)
+                                self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
+                            }else{
+                                self.preparePlayer(audioUrl: refReward.reward_URL!)
+                                self.audioPlayer.play()
+                            }
+                        }else if refReward.reward_Type == Constant().RewardType.VISUAL{
+                            self.gifVW.isHidden = false
+                            self.gifVW.image = UIImage.gifImageWithName("giphy")
+                        }else{
+                            self.gifVW.isHidden = false
+                            self.gifVW.image = UIImage.gifImageWithName("giphy")
+                            self.playSoundWith(SpeechString: refReward.reward_Text!)
+                            self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
+                        }
+                       // self.playSoundWith(SpeechString: refReward.reward_Text!)
                         self.rightCount += 1
                         self.tagArr.append(collectionView.tag)
-                        self.perform(#selector(displayNextQuestion), with: nil, afterDelay: 1.0)
                     }
                 }else{
                     for item in indexarr{
@@ -797,6 +861,37 @@ extension playVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
            
         }
 
+    }
+    
+    func preparePlayer(audioUrl: String) {
+        var error: NSError?
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: getFileURL(audioUrl: audioUrl) as URL)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 10.0
+        }
+    }
+    
+    func getDocumentsDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        return paths[0]
+    }
+    func getFileURL(audioUrl: String) -> URL {
+        //let str = String(format: "recording_5.m4a", Last_Reward_id+1)
+        let str = URL(fileURLWithPath: getDocumentsDirectory()).appendingPathComponent(audioUrl).absoluteString
+        let url = URL(string: str)
+        let path = url
+        return path!
     }
     
 }
@@ -818,7 +913,7 @@ extension Array where Element: Equatable {
 // MARK:- SFSpeechRecognizerDelegate Methods
 //------------------------------------------------------------------------------
 
-extension playVC: SFSpeechRecognizerDelegate,AVSpeechSynthesizerDelegate {
+extension playVC: SFSpeechRecognizerDelegate,AVSpeechSynthesizerDelegate,AVAudioPlayerDelegate {
 
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
@@ -839,5 +934,8 @@ extension playVC: SFSpeechRecognizerDelegate,AVSpeechSynthesizerDelegate {
     }
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {
         print("Paused")
+    }
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        self.perform(#selector(self.displayNextQuestion), with: nil, afterDelay: 1.0)
     }
 }

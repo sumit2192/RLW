@@ -60,16 +60,28 @@ class recognizingVC: UIViewController {
     //MARK:-
     
     func fetchWords(){
-       // let Predicate = NSPredicate(format: "")
+        // let Predicate = NSPredicate(format: "")
         wordsArr = persistenceStrategy.getWord(Entity: Constant().Table.WORDS, predicate: nil)
         switch game_id {
         case 3:
-            wordsArr = wordsArr.filter({$0.same_word_id != 0})
+            if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS){
+                wordsArr = wordsArr.filter({$0.same_word_id != 0 && $0.type == 1})
+            }else{
+                wordsArr = wordsArr.filter({$0.same_word_id != 0})
+            }
+            
         case 4:
-            wordsArr = wordsArr.filter({$0.opp_word_id != 0})
+            
+            if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS){
+                wordsArr = wordsArr.filter({$0.opp_word_id != 0 && $0.type == 1})
+            }else{
+                wordsArr = wordsArr.filter({$0.opp_word_id != 0})
+            }
+            
         default:
-            print("Default Value")
-           // wordsArr = wordsArr.filter({$0.type == 2})
+            if !DEFAULTS.bool(forKey: Constant().UD_SUBSCRIPTION_STATUS){
+                wordsArr = wordsArr.filter({$0.type == 1})
+            }
         }
         for wd in wordsArr{
             print(wd.name!)
